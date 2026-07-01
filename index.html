@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goalytics — Collaborative OKR Platform Powered by AI</title>
+    <meta name="description"
+        content="Goalytics is the AI-powered OKR platform that unites your team through real-time collaborative goal-setting sessions.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+
+<body>
+
+    <!-- ═══════════════════════════════════════════════
+         NAVIGATION
+    ═══════════════════════════════════════════════ -->
+    <nav id="navbar">
+        <div class="nav-inner container">
+            <a href="#" class="logo">
+                <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true">
+                    <circle cx="18" cy="18" r="17" fill="var(--primary-600)" />
+                    <path d="M10 18 L16 24 L26 12" stroke="#ffffff" stroke-width="3" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <circle cx="18" cy="18" r="6" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" fill="none" />
+                    <circle cx="18" cy="18" r="11" stroke="rgba(255,255,255,0.15)" stroke-width="1.5" fill="none" />
+                </svg>
+                <span>Goalytics</span>
+            </a>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#collaborative">Sessions</a></li>
+                <li><a href="#ai">AI</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="#contact" class="btn btn-primary nav-cta">Get in Touch</a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ═══════════════════════════════════════════════
+         1. HERO
+    ═══════════════════════════════════════════════ -->
+    <section id="hero">
+        <div class="hero-bg-blobs" aria-hidden="true">
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+            <div class="blob blob-3"></div>
+        </div>
+
+        <div class="container hero-inner">
+            <!-- Left: Text -->
+            <div class="hero-text">
+                <div class="hero-badge" id="hero-badge">
+                    <span class="badge-dot"></span>
+                    AI-Powered OKR Platform
+                </div>
+                <h1 id="hero-headline">
+                    Turn Strategy<br>
+                    Into Action —<br>
+                    <span class="hero-accent">Together.</span>
+                </h1>
+                <p class="hero-sub" id="hero-sub">
+                    Goalytics brings your entire team into the goal-setting process through
+                    live collaborative sessions, AI-generated suggestions, and a structured
+                    OKR framework that keeps everyone aligned and accountable.
+                </p>
+                <div class="hero-actions" id="hero-actions">
+                    <a href="#contact" class="btn btn-primary btn-lg">Get Started</a>
+                    <a href="#how-it-works" class="btn btn-ghost btn-lg">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                            <circle cx="12" cy="12" r="10" />
+                            <polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none" />
+                        </svg>
+                        See How It Works
+                    </a>
+                </div>
+                <div class="hero-stats" id="hero-stats">
+                    <div class="stat">
+                        <strong class="stat-num" data-target="72">0</strong><span>%</span>
+                        <span class="stat-label">Top Decile Performance</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <strong class="stat-num" data-target="22">0</strong><span>%</span>
+                        <span class="stat-label">Faster to Hit Targets</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <strong class="stat-num" data-target="31">0</strong><span>%</span>
+                        <span class="stat-label">Better Results</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Session Mockup -->
+            <div class="hero-mockup" id="hero-mockup"
+                aria-label="Product screenshot showing a live collaborative session">
+                <div class="mockup-card">
+                    <div class="mockup-header">
+                        <div class="mockup-session-info">
+                            <div class="live-badge">
+                                <span class="live-dot" aria-hidden="true"></span>
+                                Live Session
+                            </div>
+                            <span class="mockup-session-name">Q3 Strategy — Engineering</span>
+                        </div>
+                        <div class="mockup-avatars">
+                            <div class="m-avatar" style="background:#2b77cc" title="Ali H.">AH</div>
+                            <div class="m-avatar" style="background:#12b76a" title="Sara K.">SK</div>
+                            <div class="m-avatar" style="background:#f79009" title="Mike P.">MP</div>
+                            <div class="m-avatar m-avatar-more" title="4 more">+4</div>
+                        </div>
+                    </div>
+
+                    <div class="mockup-step-label">Step 1 of 4 — Define Goals</div>
+
+                    <div class="mockup-goals">
+                        <div class="m-goal-card m-goal-selected">
+                            <div class="m-goal-content">Increase platform reliability to 99.9% uptime</div>
+                            <div class="m-goal-footer">
+                                <span class="m-like-btn"><svg width="12" height="12" viewBox="0 0 24 24"
+                                        fill="currentColor" aria-hidden="true">
+                                        <path
+                                            d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14z" />
+                                    </svg> 9</span>
+                                <span class="m-check" aria-label="Selected">✓</span>
+                            </div>
+                        </div>
+                        <div class="m-goal-card">
+                            <div class="m-goal-content">Ship 3 enterprise integrations this quarter</div>
+                            <div class="m-goal-footer">
+                                <span class="m-like-btn"><svg width="12" height="12" viewBox="0 0 24 24"
+                                        fill="currentColor" aria-hidden="true">
+                                        <path
+                                            d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14z" />
+                                    </svg> 7</span>
+                                <span class="m-ai-tag">AI</span>
+                            </div>
+                        </div>
+                        <div class="m-goal-card m-goal-adding">
+                            <div class="m-goal-content m-typing">Reduce deployment time by 60%<span
+                                    class="cursor">|</span></div>
+                            <div class="m-goal-footer">
+                                <span class="m-typing-label">Sara is typing…</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mockup-ai-strip">
+                        <span class="mockup-ai-icon" aria-hidden="true">✦</span>
+                        <span>AI has 3 goal suggestions ready</span>
+                        <button class="mockup-ai-btn">View</button>
+                    </div>
+                </div>
+
+                <!-- Floating decorative cards -->
+                <div class="float-card float-card-1" aria-hidden="true">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--primary-600)"
+                        stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                        <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
+                        <polyline points="17 6 23 6 23 12" />
+                    </svg>
+                    <span>78% complete</span>
+                </div>
+                <div class="float-card float-card-2" aria-hidden="true">
+                    <span class="float-icon">🎯</span>
+                    <span>12 goals finalized</span>
+                </div>
+                <div class="float-card float-card-3" aria-hidden="true">
+                    <span class="float-icon">✦</span>
+                    <span>AI suggestion applied</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         2. ABOUT
+    ═══════════════════════════════════════════════ -->
+    <section id="about">
+        <div class="container">
+            <div class="section-label reveal">The Problem We Solve</div>
+            <h2 class="section-title reveal">OKRs fail when goals<br>are set <em>in isolation.</em></h2>
+
+            <div class="about-grid">
+                <div class="about-card about-problem reveal">
+                    <div class="about-card-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="12" y1="8" x2="12" y2="12" />
+                            <line x1="12" y1="16" x2="12.01" y2="16" />
+                        </svg>
+                    </div>
+                    <h3>The Old Way</h3>
+                    <p>Leadership sets goals top-down. Teams are told to execute. No one fully understands the why.
+                        Engagement drops, alignment breaks, and goals become box-checking exercises by Q4.</p>
+                    <ul class="about-list">
+                        <li>Siloed goal-setting with zero team input</li>
+                        <li>No shared context between leaders and executors</li>
+                        <li>Quarterly reviews reveal misalignment too late</li>
+                    </ul>
+                </div>
+
+                <div class="about-arrow reveal" aria-hidden="true">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--primary-500)"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12" />
+                        <polyline points="12 5 19 12 12 19" />
+                    </svg>
+                </div>
+
+                <div class="about-card about-solution reveal">
+                    <div class="about-card-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                            <polyline points="22 4 12 14.01 9 11.01" />
+                        </svg>
+                    </div>
+                    <h3>The Goalytics Way</h3>
+                    <p>Every session is a live collaborative workspace. Goals are built with your team — not handed down
+                        to them. The result is alignment that sticks, accountability that's intrinsic, and progress
+                        that's visible.</p>
+                    <ul class="about-list">
+                        <li>Real-time sessions where every voice is heard</li>
+                        <li>AI ensures structure and completeness</li>
+                        <li>Live dashboards keep everyone on the same page</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         3. FEATURES
+    ═══════════════════════════════════════════════ -->
+    <section id="features">
+        <div class="container">
+            <div class="section-label reveal">What You Get</div>
+            <h2 class="section-title reveal">Everything your team needs<br>to set and achieve goals</h2>
+            <p class="section-sub reveal">Built on a structured OKR framework with real-time collaboration and AI
+                assistance at every step.</p>
+
+            <div class="features-grid">
+                <!-- Feature 1 -->
+                <div class="feature-card reveal">
+                    <div class="feature-icon" style="--icon-bg: #e4ecfa; --icon-color: #2b77cc;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                            <circle cx="9" cy="7" r="4" />
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                        </svg>
+                    </div>
+                    <h3>Real-Time Collaborative Sessions</h3>
+                    <p>Launch live OKR workshops where your team adds, edits, votes on, and comments on goals
+                        simultaneously — all visible in real-time via WebSocket.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feature-card reveal">
+                    <div class="feature-icon" style="--icon-bg: #ebe9fe; --icon-color: #7a5af8;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                        </svg>
+                    </div>
+                    <h3>AI-Generated Goals & Objectives</h3>
+                    <p>AI analyzes your organization's context and suggests relevant goals, structured objectives, and
+                        measurable key results — so you start every session with a head start.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feature-card reveal">
+                    <div class="feature-icon" style="--icon-bg: #d1fadf; --icon-color: #039855;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                            <polyline points="9 11 12 14 22 4" />
+                            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
+                        </svg>
+                    </div>
+                    <h3>Structured OKR Framework</h3>
+                    <p>A clear hierarchy: Goals → Objectives → Key Results. Each layer is quantifiable and linked,
+                        giving teams and managers a coherent view of strategy-to-execution.</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="feature-card reveal">
+                    <div class="feature-icon" style="--icon-bg: #fef0c7; --icon-color: #dc6803;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                            <path d="M18 20V10" />
+                            <path d="M12 20V4" />
+                            <path d="M6 20v-6" />
+                        </svg>
+                    </div>
+                    <h3>Smart Weightage Allocation</h3>
+                    <p>Assign priority percentages to each objective. AI recommends optimal weightage distributions;
+                        participants can suggest their own — all summing to 100% with live validation.</p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="feature-card reveal">
+                    <div class="feature-icon" style="--icon-bg: #fee4e2; --icon-color: #d92d20;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                            <line x1="18" y1="20" x2="18" y2="10" />
+                            <line x1="12" y1="20" x2="12" y2="4" />
+                            <line x1="6" y1="20" x2="6" y2="14" />
+                            <line x1="2" y1="20" x2="22" y2="20" />
+                        </svg>
+                    </div>
+                    <h3>Progress Tracking & Dashboards</h3>
+                    <p>Personal dashboards show your assigned goals, objectives, and key results with live progress.
+                        Managers see team-wide performance. Export dashboards as PDF with one click.</p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="feature-card reveal">
+                    <div class="feature-icon" style="--icon-bg: #fdf2fa; --icon-color: #c11574;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                            <path
+                                d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
+                            <circle cx="12" cy="13" r="4" />
+                        </svg>
+                    </div>
+                    <h3>Goal Snapshots & Comparison Reports</h3>
+                    <p>Freeze goal progress at any point in time as a named snapshot. Compare multiple goals or
+                        snapshots side-by-side to identify trends and measure improvement over periods.</p>
+                </div>
+
+                <!-- Feature 7 -->
+                <div class="feature-card reveal">
+                    <div class="feature-icon" style="--icon-bg: #f4f3ff; --icon-color: #5925dc;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                            <polyline points="17 8 12 3 7 8" />
+                            <line x1="12" y1="3" x2="12" y2="15" />
+                        </svg>
+                    </div>
+                    <h3>Data Request System</h3>
+                    <p>Admins can request key result progress data from team members on a schedule. Recipients submit
+                        values via a dedicated portal — even without logging in to the main app.</p>
+                </div>
+
+                <!-- Feature 8 -->
+                <div class="feature-card reveal">
+                    <div class="feature-icon" style="--icon-bg: #fef6ee; --icon-color: #b93815;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        </svg>
+                    </div>
+                    <h3>Role-Based Access Control</h3>
+                    <p>Four roles — Admin, Manager, Participant, and Viewer — with precisely scoped permissions. Admins
+                        lead sessions, participants suggest and vote, viewers observe in real-time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         4. HOW IT WORKS
+    ═══════════════════════════════════════════════ -->
+    <section id="how-it-works">
+        <div class="container">
+            <div class="section-label reveal">The Process</div>
+            <h2 class="section-title reveal">From setup to insight<br>in six clear steps</h2>
+
+            <div class="steps-container">
+                <div class="steps-line" aria-hidden="true"></div>
+
+                <div class="step">
+                    <div class="step-number" aria-hidden="true">01</div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                                <rect x="2" y="3" width="20" height="14" rx="2" />
+                                <line x1="8" y1="21" x2="16" y2="21" />
+                                <line x1="12" y1="17" x2="12" y2="21" />
+                            </svg>
+                        </div>
+                        <h3>Set Up Your Organization</h3>
+                        <p>Admin completes onboarding: creates the organization, defines Team Types (Projects,
+                            Departments, Employees), and adds the people who will participate in sessions.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number" aria-hidden="true">02</div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                <circle cx="9" cy="7" r="4" />
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                            </svg>
+                        </div>
+                        <h3>Launch a Session & Invite Your Team</h3>
+                        <p>Create a Collaborative Session for a project, department, or employee. Invite collaborators
+                            by email — assigning each as Participant or Viewer. Schedule the session with timezone
+                            support.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number" aria-hidden="true">03</div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                            </svg>
+                        </div>
+                        <h3>Brainstorm Goals Together, Live</h3>
+                        <p>Everyone joins the live session. Team members add goals, like their favorites, and leave
+                            comments — all seen in real-time. AI suggests additional goals based on org context. Admin
+                            finalizes the goal list.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number" aria-hidden="true">04</div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                                <polyline points="9 11 12 14 22 4" />
+                                <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
+                            </svg>
+                        </div>
+                        <h3>Define Objectives & Key Results</h3>
+                        <p>For each finalized goal, the team collaborates on objectives — the qualitative "what" — and
+                            key results — the quantitative "how much." Participants can suggest; admins confirm and
+                            finalize.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number" aria-hidden="true">05</div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                                <path d="M18 20V10" />
+                                <path d="M12 20V4" />
+                                <path d="M6 20v-6" />
+                            </svg>
+                        </div>
+                        <h3>Set Objective Priorities (Weightage)</h3>
+                        <p>Assign percentage weights to each objective within a goal. Team members suggest their own
+                            weightages; AI recommends optimal distributions. Admin applies the final values ensuring
+                            they sum to 100%.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number" aria-hidden="true">06</div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                                <line x1="18" y1="20" x2="18" y2="10" />
+                                <line x1="12" y1="20" x2="12" y2="4" />
+                                <line x1="6" y1="20" x2="6" y2="14" />
+                                <line x1="2" y1="20" x2="22" y2="20" />
+                            </svg>
+                        </div>
+                        <h3>Track, Submit Data & Compare</h3>
+                        <p>Progress is tracked on goal dashboards. Admins request data submissions from team members.
+                            Snapshots freeze progress at key moments. The Comparison Report shows trends across goals
+                            and time periods.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         5. COLLABORATIVE SESSION
+    ═══════════════════════════════════════════════ -->
+    <section id="collaborative">
+        <div class="container">
+            <div class="collab-inner">
+                <div class="collab-text reveal">
+                    <div class="section-label">Real-Time Collaboration</div>
+                    <h2>Your entire team,<br>in one room — live.</h2>
+                    <p>Goalytics sessions are powered by WebSocket technology, meaning every action — a new goal added,
+                        a like given, a comment posted — is instantly visible to every participant in the room. No
+                        refreshing, no waiting, no back-and-forth emails.</p>
+
+                    <div class="collab-features">
+                        <div class="collab-feature">
+                            <div class="cf-dot" style="background: var(--primary-500);" aria-hidden="true"></div>
+                            <div>
+                                <strong>Live Presence</strong>
+                                <p>See who's currently in the session with a live connected-users panel. Know exactly
+                                    who's working alongside you.</p>
+                            </div>
+                        </div>
+                        <div class="collab-feature">
+                            <div class="cf-dot" style="background: var(--success);" aria-hidden="true"></div>
+                            <div>
+                                <strong>Voting & Reactions</strong>
+                                <p>Team members like goals and objectives to surface the most important ideas. Admin
+                                    uses vote counts to guide finalization decisions.</p>
+                            </div>
+                        </div>
+                        <div class="collab-feature">
+                            <div class="cf-dot" style="background: #7a5af8;" aria-hidden="true"></div>
+                            <div>
+                                <strong>Live Chat</strong>
+                                <p>A built-in session chat lets the team discuss ideas without leaving the workspace.
+                                    Context stays in the session where it belongs.</p>
+                            </div>
+                        </div>
+                        <div class="collab-feature">
+                            <div class="cf-dot" style="background: #f79009;" aria-hidden="true"></div>
+                            <div>
+                                <strong>Two Session Modes</strong>
+                                <p><strong>Standard:</strong> team-led with AI assistance. <strong>Agentic:</strong> AI
+                                    drives the full OKR structure — you review and refine.</p>
+                            </div>
+                        </div>
+                        <div class="collab-feature">
+                            <div class="cf-dot" style="background: #f04438;" aria-hidden="true"></div>
+                            <div>
+                                <strong>Re-Collaboration</strong>
+                                <p>Need to revisit a previous goal? Goalytics supports re-collaboration sessions that
+                                    update existing OKRs without losing the historical record.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="collab-visual reveal" aria-label="Session interface visual">
+                    <div class="collab-card collab-main-card">
+                        <div class="collab-card-header">
+                            <span class="collab-card-title">Objective Weightage</span>
+                            <span class="collab-card-sub">3 objectives · All locked</span>
+                        </div>
+                        <div class="weightage-row">
+                            <span class="wr-label">Improve API performance</span>
+                            <div class="wr-bar-wrap">
+                                <div class="wr-bar" style="width:40%"></div>
+                            </div>
+                            <span class="wr-pct">40%</span>
+                        </div>
+                        <div class="weightage-row">
+                            <span class="wr-label">Reduce error rate</span>
+                            <div class="wr-bar-wrap">
+                                <div class="wr-bar" style="width:35%"></div>
+                            </div>
+                            <span class="wr-pct">35%</span>
+                        </div>
+                        <div class="weightage-row">
+                            <span class="wr-label">Improve test coverage</span>
+                            <div class="wr-bar-wrap">
+                                <div class="wr-bar" style="width:25%"></div>
+                            </div>
+                            <span class="wr-pct">25%</span>
+                        </div>
+                        <div class="weightage-total">
+                            <span>Total</span>
+                            <strong>100%</strong>
+                        </div>
+                        <div class="ai-suggest-strip">
+                            <span>✦ AI suggests: 45% / 30% / 25%</span>
+                            <button class="apply-btn">Apply</button>
+                        </div>
+                    </div>
+
+                    <div class="collab-mini-card collab-mini-1">
+                        <div class="mini-avatars">
+                            <div class="sm-avatar" style="background:#2b77cc">A</div>
+                            <div class="sm-avatar" style="background:#12b76a">S</div>
+                            <div class="sm-avatar" style="background:#f79009">M</div>
+                        </div>
+                        <span>7 online now</span>
+                    </div>
+
+                    <div class="collab-mini-card collab-mini-2">
+                        <div class="chat-bubble">
+                            <strong>Mike:</strong> Should we weight test coverage higher?
+                        </div>
+                        <div class="chat-bubble chat-bubble-own">
+                            <strong>You:</strong> AI says 25% is fine 👍
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         6. HOW AI IS INTEGRATED
+    ═══════════════════════════════════════════════ -->
+    <section id="ai">
+        <div class="ai-bg" aria-hidden="true"></div>
+        <div class="container">
+            <div class="section-label reveal ai-label">AI Integration</div>
+            <h2 class="section-title reveal ai-title">AI isn't a feature.<br>It's your strategy partner.</h2>
+            <p class="section-sub reveal ai-sub">AI is woven through every layer of Goalytics — from the first
+                brainstorm to long-term performance analysis.</p>
+
+            <div class="ai-grid">
+                <div class="ai-card reveal">
+                    <div class="ai-card-num">01</div>
+                    <h3>Document-Grounded Context</h3>
+                    <p>Upload strategy decks, briefs, or other org documents when creating an Organization or Team
+                        Type. AI ingests this context so every suggestion downstream is grounded in your real
+                        strategy — not generic templates.</p>
+                    <div class="ai-card-tag">Used in: Organization & Team Type Setup</div>
+                </div>
+                <div class="ai-card reveal">
+                    <div class="ai-card-num">02</div>
+                    <h3>Goal Generation</h3>
+                    <p>AI analyzes your organization, team type, and historical context to generate a shortlist of
+                        relevant, realistic strategic goals before your session even starts.</p>
+                    <div class="ai-card-tag">Used in: Goal Setup</div>
+                </div>
+                <div class="ai-card reveal">
+                    <div class="ai-card-num">03</div>
+                    <h3>Objective Structuring</h3>
+                    <p>For each finalized goal, AI proposes a set of well-defined, measurable objectives — saving hours
+                        of structured thinking and prompting discussion among your team.</p>
+                    <div class="ai-card-tag">Used in: Collaborative Session</div>
+                </div>
+                <div class="ai-card reveal">
+                    <div class="ai-card-num">04</div>
+                    <h3>Key Result Proposals</h3>
+                    <p>AI drafts quantifiable key results — including metric, target value, unit, and baseline — so
+                        every objective has a clear success measure from day one.</p>
+                    <div class="ai-card-tag">Used in: Key Result Setup</div>
+                </div>
+                <div class="ai-card reveal">
+                    <div class="ai-card-num">05</div>
+                    <h3>Weightage Balancing</h3>
+                    <p>AI recommends optimal percentage distributions across your objectives, ensuring priorities are
+                        proportional to impact. Team can accept, modify, or apply its own values.</p>
+                    <div class="ai-card-tag">Used in: Weightage Step</div>
+                </div>
+                <div class="ai-card reveal">
+                    <div class="ai-card-num">06</div>
+                    <h3>Dashboard Insights</h3>
+                    <p>On any goal dashboard, trigger AI analysis to get plain-language performance commentary — what's
+                        on track, what needs attention, and actionable recommendations.</p>
+                    <div class="ai-card-tag">Used in: Goal Dashboard</div>
+                </div>
+                <div class="ai-card reveal">
+                    <div class="ai-card-num">07</div>
+                    <h3>Agentic Mode</h3>
+                    <p>Enable fully autonomous AI sessions where AI proposes the complete OKR structure — goals,
+                        objectives, key results, and weightages — for your team to review, refine, and finalize.</p>
+                    <div class="ai-card-tag">Used in: Agentic Sessions</div>
+                </div>
+                <div class="ai-card reveal">
+                    <div class="ai-card-num">08</div>
+                    <h3>Snapshot Insights</h3>
+                    <p>When a goal snapshot is taken, AI provides an interpretive analysis comparing it to previous
+                        snapshots — surfacing trends and identifying risks before they become blockers.</p>
+                    <div class="ai-card-tag">Used in: Snapshots</div>
+                </div>
+                <div class="ai-card reveal">
+                    <div class="ai-card-num">09</div>
+                    <h3>Comparison Reports</h3>
+                    <p>Compare multiple goals side-by-side, or stack a goal's snapshots against each other over time —
+                        AI surfaces the trends and deltas so you can see exactly what's improving and what's stalling.</p>
+                    <div class="ai-card-tag">Used in: Comparison Reports</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         7. TEAM
+    ═══════════════════════════════════════════════ -->
+    <section id="team">
+        <div class="container">
+            <div class="section-label reveal">Our Leadership Team</div>
+            <h2 class="section-title reveal">We are a global team of<br>leaders, architects, and builders.</h2>
+            <p class="section-sub reveal">Our expertise and thought leadership spans strategy, workplace
+                transformation, and technology AI.</p>
+
+            <div class="team-grid">
+                <div class="team-card reveal">
+                    <div class="team-photo-wrap">
+                        <!-- PLACEHOLDER: Replace with actual founder photo -->
+                        <div class="team-photo-placeholder" aria-label="Nida Mehtab Gillio photo placeholder">
+                            <img src="/assets/images/founder.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="team-content">
+                        <h3 class="team-name">Nida Mehtab Gillio <span class="team-creds">B.Arch, MSRE</span></h3>
+                        <p class="team-title">CEO</p>
+                        <p class="team-meta">San Francisco</p>
+                        <p class="team-bio">
+                            A leader at and advisor to Big Tech and Fortune 500 companies, Nida lived first-hand how
+                            strategy fails to inform execution. After years in a love/hate relationship with OKRs,
+                            she founded Goalytics to put humans back at the center of goal-setting. She also founded
+                            Caryatid and brings deep expertise in strategy-to-execution workplace transformation and
+                            change management.
+                        </p>
+                        <blockquote class="team-quote">
+                            "The key to making OKRs deliver isn't just discipline or the right tech — it's clearly
+                            understanding the goals they're meant to serve."
+                        </blockquote>
+                    </div>
+                </div>
+
+                <div class="team-card reveal">
+                    <div class="team-photo-wrap">
+                        <!-- PLACEHOLDER: Replace with actual CTO photo -->
+                        <div class="team-photo-placeholder" aria-label="Umair Khan photo placeholder">
+                            <img src="/assets/images/umair.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="team-content">
+                        <h3 class="team-name">Umair Khan <span class="team-creds">B.Eng</span></h3>
+                        <p class="team-title">CTO</p>
+                        <p class="team-meta">Dubai</p>
+                        <p class="team-bio">
+                            A dynamic architect backed by AWS certification and deep software engineering training,
+                            Umair began his career as a Business Analyst before evolving into a driven CTO. He
+                            combines management acumen with technical expertise across cloud platforms like AWS and
+                            Azure — spanning Lambda, App Service/Functions, EC2, RDS, and EKS/AKS Kubernetes — with
+                            recent ventures in blockchain, including delivering a pioneering cryptocurrency exchange.
+                            He brings award-winning full stack development to Goalytics as CTO, and also serves as
+                            CTO of Digital Gravity.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         8. CONTACT
+    ═══════════════════════════════════════════════ -->
+    <section id="contact">
+        <div class="container">
+            <div class="contact-inner">
+                <div class="contact-text reveal">
+                    <div class="section-label">Get in Touch</div>
+                    <h2>Ready to align<br>your team?</h2>
+                    <p>Whether you want a demo, have questions about pricing, or want to discuss how Goalytics fits your
+                        organization — drop us a message and we'll get back to you within 24 hours.</p>
+                    <div class="contact-info">
+                        <div class="contact-info-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary-500)"
+                                stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                <polyline points="22,6 12,13 2,6" />
+                            </svg>
+                            <span>info@goalytics.io</span>
+                        </div>
+                        <div class="contact-info-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary-500)"
+                                stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                            <span>San Francisco, CA, USA</span>
+                        </div>
+                        <div class="contact-info-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary-500)"
+                                stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                                <circle cx="12" cy="12" r="10" />
+                                <line x1="12" y1="8" x2="12" y2="12" />
+                                <line x1="12" y1="16" x2="12.01" y2="16" />
+                            </svg>
+                            <span>Interested in a demo? Put <strong>"Demo"</strong> in the subject line.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form reveal" id="contact-form" novalidate aria-label="Contact form">
+                    <div class="form-group">
+                        <label for="contact-name">Full Name <span class="req" aria-hidden="true">*</span></label>
+                        <input type="text" id="contact-name" name="name" placeholder="Your full name"
+                            autocomplete="name" required aria-required="true">
+                        <span class="form-error" id="error-name" role="alert" aria-live="polite"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-email">Email Address <span class="req" aria-hidden="true">*</span></label>
+                        <input type="email" id="contact-email" name="email" placeholder="you@company.com"
+                            autocomplete="email" required aria-required="true">
+                        <span class="form-error" id="error-email" role="alert" aria-live="polite"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-company">Company / Organization</label>
+                        <input type="text" id="contact-company" name="company" placeholder="Your company name"
+                            autocomplete="organization">
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-message">Message <span class="req" aria-hidden="true">*</span></label>
+                        <textarea id="contact-message" name="message" rows="5"
+                            placeholder="Tell us about your team and what you're looking to achieve…" required
+                            aria-required="true"></textarea>
+                        <span class="form-error" id="error-message" role="alert" aria-live="polite"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg btn-full" id="submit-btn">
+                        <span class="btn-text">Send Message</span>
+                        <span class="btn-spinner" aria-hidden="true" hidden></span>
+                    </button>
+                    <div class="form-success" id="form-success" hidden role="status" aria-live="polite">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--success)"
+                            stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                        <span>Message sent! We'll be in touch within 24 hours.</span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         9. FOOTER
+    ═══════════════════════════════════════════════ -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="#" class="logo logo-footer">
+                        <svg width="30" height="30" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            aria-hidden="true">
+                            <circle cx="18" cy="18" r="17" fill="var(--primary-600)" />
+                            <path d="M10 18 L16 24 L26 12" stroke="#ffffff" stroke-width="3" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <circle cx="18" cy="18" r="6" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"
+                                fill="none" />
+                            <circle cx="18" cy="18" r="11" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"
+                                fill="none" />
+                        </svg>
+                        <span>Goalytics</span>
+                    </a>
+                    <p>The AI-powered OKR platform that brings your whole team into the goal-setting process — live,
+                        collaborative, and aligned.</p>
+                    <!-- TODO: Replace # with the real Goalytics LinkedIn URL when available -->
+                    <div class="footer-socials">
+                        <a href="#" class="social-link" aria-label="Goalytics on LinkedIn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                                <rect x="2" y="9" width="4" height="12" />
+                                <circle cx="4" cy="4" r="2" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-links-group">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#collaborative">Collaborative Sessions</a></li>
+                        <li><a href="#ai">AI Integration</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links-group">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#team">Team</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <!-- PLACEHOLDER: Add real links as they become available -->
+                        <li><a href="#">Blog <em>(coming soon)</em></a></li>
+                        <li><a href="#">Careers <em>(coming soon)</em></a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links-group">
+                    <h4>Legal</h4>
+                    <ul>
+                        <!-- TODO: Replace # with actual policy URLs when pages are live -->
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms &amp; Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© <span id="footer-year"></span> Goalytics. All rights reserved.</p>
+                <p class="footer-credit">Built with purpose — strategy belongs to everyone.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GSAP 3.12.5 — loaded via jsDelivr CDN (matches app's gsap ^3.13.0) -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+</body>
+
+</html>
