@@ -23,24 +23,15 @@
     <nav id="navbar">
         <div class="nav-inner container">
             <a href="#" class="logo">
-                <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true">
-                    <circle cx="18" cy="18" r="17" fill="var(--primary-600)" />
-                    <path d="M10 18 L16 24 L26 12" stroke="#ffffff" stroke-width="3" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                    <circle cx="18" cy="18" r="6" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" fill="none" />
-                    <circle cx="18" cy="18" r="11" stroke="rgba(255,255,255,0.15)" stroke-width="1.5" fill="none" />
-                </svg>
-                <span>Goalytics</span>
+                <img src="/assets/images/logo-colored.svg" alt="">
             </a>
 
             <ul class="nav-links" id="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#features">Features</a></li>
-                <li><a href="#how-it-works">How It Works</a></li>
                 <li><a href="#collaborative">Sessions</a></li>
-                <li><a href="#ai">AI</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
             </ul>
 
             <div class="nav-actions">
@@ -191,7 +182,108 @@
     </section>
 
     <!-- ═══════════════════════════════════════════════
-         2. ABOUT
+         2. OUR STORY
+    ═══════════════════════════════════════════════ -->
+    <section id="story">
+        <div class="container">
+            <div class="story-inner">
+                <div class="story-text">
+                    <div class="section-label reveal">Our Story</div>
+                    <h2 class="section-title reveal story-title">Goalytics was born out of a
+                        <span class="highlight-marker">love/hate</span> relationship with OKRs.
+                    </h2>
+                    <p class="story-lead reveal">As leaders at and advisors to Big Tech and F500 companies, we lived
+                        how strategy fails to inform execution.</p>
+                    <div class="story-callout reveal">
+                        <p>Studies show <span class="callout-strong">40% of execution effort is wasted</span> due to
+                            weak alignment.</p>
+                    </div>
+                </div>
+
+                <svg class="story-arrow reveal" width="120" height="90" viewBox="0 0 120 90" fill="none"
+                    aria-hidden="true">
+                    <defs>
+                        <marker id="story-arrow-head" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6"
+                            markerHeight="6" orient="auto-start-reverse">
+                            <path d="M0,0 L10,5 L0,10 z" fill="var(--primary-500)" />
+                        </marker>
+                    </defs>
+                    <path d="M4 10 C 46 4, 78 46, 112 78" stroke="var(--primary-500)" stroke-width="2.5"
+                        stroke-linecap="round" stroke-dasharray="1 8" marker-end="url(#story-arrow-head)" />
+                </svg>
+
+                <div class="story-chart-card reveal">
+                    <div class="story-chart-header">
+                        <h3 class="story-chart-title">Weekly Hours per FTE</h3>
+                    </div>
+
+                    <div class="story-chart-body">
+                        <ul class="chart-legend">
+                            <li><span class="legend-dot" style="background:#4ADE80"></span>Reporting</li>
+                            <li><span class="legend-dot" style="background:#2DD4BF"></span>Rework</li>
+                            <li><span class="legend-dot" style="background:#3B9FE6"></span>Alignment Meetings</li>
+                            <li><span class="legend-dot" style="background:#6D28D9"></span>Productive Work</li>
+                        </ul>
+
+                        <div class="chart-bars-area">
+                            <div class="chart-bar-group">
+                                <div class="chart-bar-stack">
+                                    <div class="bar-segment" style="height:98px;background:#6D28D9;">
+                                        <span class="seg-value" data-target="14">14</span>
+                                    </div>
+                                    <div class="bar-segment" style="height:98px;background:#3B9FE6;">
+                                        <span class="seg-value" data-target="14">14</span>
+                                    </div>
+                                    <div class="bar-segment" style="height:49px;background:#2DD4BF;">
+                                        <span class="seg-value" data-target="7">7</span>
+                                    </div>
+                                    <div class="bar-segment" style="height:42px;background:#4ADE80;">
+                                        <span class="seg-value" data-target="6">6</span>
+                                    </div>
+                                </div>
+                                <span class="chart-bar-label">Average</span>
+                            </div>
+
+                            <div class="chart-connectors" aria-hidden="true">
+                                <div class="connector-line" style="bottom:45%;">
+                                    <span class="connector-label">-9</span>
+                                </div>
+                                <div class="connector-line" style="bottom:80%;">
+                                    <span class="connector-label">-4</span>
+                                </div>
+                            </div>
+
+                            <div class="chart-bar-group">
+                                <div class="chart-bar-stack">
+                                    <div class="bar-segment" style="height:210px;background:#6D28D9;">
+                                        <span class="seg-value" data-target="30">30</span>
+                                    </div>
+                                    <div class="bar-segment bar-segment-thin" style="height:7px;background:#86EFAC;">
+                                        <span class="seg-value" data-target="1">1</span>
+                                    </div>
+                                    <div class="bar-segment" style="height:35px;background:#3B82F6;">
+                                        <span class="seg-value" data-target="5">5</span>
+                                    </div>
+                                    <div class="bar-segment" style="height:21px;background:#22D3EE;">
+                                        <span class="seg-value" data-target="3">3</span>
+                                    </div>
+                                </div>
+                                <span class="chart-bar-label">Top Decile</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="story-chart-footer">
+                        <div class="story-cost-box">Annual cost: <strong>$50M</strong> per 1,000 FTE</div>
+                        <p class="story-caption">Source: McKinsey, Microsoft, Gartner</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         3. ABOUT
     ═══════════════════════════════════════════════ -->
     <section id="about">
         <div class="container">
@@ -249,7 +341,7 @@
     </section>
 
     <!-- ═══════════════════════════════════════════════
-         3. FEATURES
+         4. FEATURES
     ═══════════════════════════════════════════════ -->
     <section id="features">
         <div class="container">
@@ -380,7 +472,7 @@
     </section>
 
     <!-- ═══════════════════════════════════════════════
-         4. HOW IT WORKS
+         5. HOW IT WORKS
     ═══════════════════════════════════════════════ -->
     <section id="how-it-works">
         <div class="container">
@@ -500,7 +592,7 @@
     </section>
 
     <!-- ═══════════════════════════════════════════════
-         5. COLLABORATIVE SESSION
+         6. COLLABORATIVE SESSION
     ═══════════════════════════════════════════════ -->
     <section id="collaborative">
         <div class="container">
@@ -512,51 +604,57 @@
                         a like given, a comment posted — is instantly visible to every participant in the room. No
                         refreshing, no waiting, no back-and-forth emails.</p>
 
-                    <div class="collab-features">
-                        <div class="collab-feature">
-                            <div class="cf-dot" style="background: var(--primary-500);" aria-hidden="true"></div>
-                            <div>
-                                <strong>Live Presence</strong>
-                                <p>See who's currently in the session with a live connected-users panel. Know exactly
-                                    who's working alongside you.</p>
-                            </div>
+                    <figure class="collab-session-image">
+                        <img src="/assets/images/session.jpg" alt="">
+                    </figure>
+
+                </div>
+                <div class="collab-features">
+                    <div class="collab-feature">
+                        <div class="cf-dot" style="background: var(--primary-500);" aria-hidden="true"></div>
+                        <div>
+                            <strong>Live Presence</strong>
+                            <p>See who's currently in the session with a live connected-users panel. Know exactly
+                                who's working alongside you.</p>
                         </div>
-                        <div class="collab-feature">
-                            <div class="cf-dot" style="background: var(--success);" aria-hidden="true"></div>
-                            <div>
-                                <strong>Voting & Reactions</strong>
-                                <p>Team members like goals and objectives to surface the most important ideas. Admin
-                                    uses vote counts to guide finalization decisions.</p>
-                            </div>
+                    </div>
+                    <div class="collab-feature">
+                        <div class="cf-dot" style="background: var(--success);" aria-hidden="true"></div>
+                        <div>
+                            <strong>Voting & Reactions</strong>
+                            <p>Team members like goals and objectives to surface the most important ideas. Admin
+                                uses vote counts to guide finalization decisions.</p>
                         </div>
-                        <div class="collab-feature">
-                            <div class="cf-dot" style="background: #7a5af8;" aria-hidden="true"></div>
-                            <div>
-                                <strong>Live Chat</strong>
-                                <p>A built-in session chat lets the team discuss ideas without leaving the workspace.
-                                    Context stays in the session where it belongs.</p>
-                            </div>
+                    </div>
+                    <div class="collab-feature">
+                        <div class="cf-dot" style="background: #7a5af8;" aria-hidden="true"></div>
+                        <div>
+                            <strong>Live Chat</strong>
+                            <p>A built-in session chat lets the team discuss ideas without leaving the workspace.
+                                Context stays in the session where it belongs.</p>
                         </div>
-                        <div class="collab-feature">
-                            <div class="cf-dot" style="background: #f79009;" aria-hidden="true"></div>
-                            <div>
-                                <strong>Two Session Modes</strong>
-                                <p><strong>Standard:</strong> team-led with AI assistance. <strong>Agentic:</strong> AI
-                                    drives the full OKR structure — you review and refine.</p>
-                            </div>
+                    </div>
+                    <div class="collab-feature">
+                        <div class="cf-dot" style="background: #f79009;" aria-hidden="true"></div>
+                        <div>
+                            <strong>Three Session Modes</strong>
+                            <p><strong>Solo:</strong> work through your OKRs on your own, with AI assistance at every
+                                step. <strong>Collaborative:</strong> your whole team builds goals together, live and in
+                                real time. <strong>Agentic:</strong> AI drives the full OKR structure — you simply
+                                review and refine.</p>
                         </div>
-                        <div class="collab-feature">
-                            <div class="cf-dot" style="background: #f04438;" aria-hidden="true"></div>
-                            <div>
-                                <strong>Re-Collaboration</strong>
-                                <p>Need to revisit a previous goal? Goalytics supports re-collaboration sessions that
-                                    update existing OKRs without losing the historical record.</p>
-                            </div>
+                    </div>
+                    <div class="collab-feature">
+                        <div class="cf-dot" style="background: #f04438;" aria-hidden="true"></div>
+                        <div>
+                            <strong>Re-Collaboration</strong>
+                            <p>Need to revisit a previous goal? Goalytics supports re-collaboration sessions that
+                                update existing OKRs without losing the historical record.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="collab-visual reveal" aria-label="Session interface visual">
+                <!-- <div class="collab-visual reveal" aria-label="Session interface visual">
                     <div class="collab-card collab-main-card">
                         <div class="collab-card-header">
                             <span class="collab-card-title">Objective Weightage</span>
@@ -610,13 +708,13 @@
                             <strong>You:</strong> AI says 25% is fine 👍
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
 
     <!-- ═══════════════════════════════════════════════
-         6. HOW AI IS INTEGRATED
+         7. HOW AI IS INTEGRATED
     ═══════════════════════════════════════════════ -->
     <section id="ai">
         <div class="ai-bg" aria-hidden="true"></div>
@@ -688,7 +786,8 @@
                     <div class="ai-card-num">09</div>
                     <h3>Comparison Reports</h3>
                     <p>Compare multiple goals side-by-side, or stack a goal's snapshots against each other over time —
-                        AI surfaces the trends and deltas so you can see exactly what's improving and what's stalling.</p>
+                        AI surfaces the trends and deltas so you can see exactly what's improving and what's stalling.
+                    </p>
                     <div class="ai-card-tag">Used in: Comparison Reports</div>
                 </div>
             </div>
@@ -696,7 +795,7 @@
     </section>
 
     <!-- ═══════════════════════════════════════════════
-         7. TEAM
+         8. TEAM
     ═══════════════════════════════════════════════ -->
     <section id="team">
         <div class="container">
@@ -735,7 +834,7 @@
                     <div class="team-photo-wrap">
                         <!-- PLACEHOLDER: Replace with actual CTO photo -->
                         <div class="team-photo-placeholder" aria-label="Umair Khan photo placeholder">
-                            <img src="/assets/images/umair.jpg" alt="">
+                            <img src="/assets/images/cto.jpg" alt="">
                         </div>
                     </div>
                     <div class="team-content">
@@ -758,7 +857,126 @@
     </section>
 
     <!-- ═══════════════════════════════════════════════
-         8. CONTACT
+         9. TESTIMONIALS
+    ═══════════════════════════════════════════════ -->
+    <section id="testimonials">
+        <div class="container">
+            <div class="section-label reveal">Client Testimonials</div>
+            <h2 class="section-title reveal">Teams that traded guesswork<br>for <em>alignment.</em></h2>
+            <p class="section-sub reveal">Hear from leaders who've turned quarterly planning chaos into
+                collaborative clarity with Goalytics.</p>
+
+            <div class="testimonial-slider reveal" id="testimonial-slider" role="region" tabindex="0"
+                aria-roledescription="carousel" aria-label="Client testimonials">
+                <svg class="testimonial-quote-mark" width="64" height="48" viewBox="0 0 64 48" fill="none"
+                    aria-hidden="true">
+                    <path
+                        d="M14.6 48C10 48 6.3 46.4 3.8 43.2 1.3 40 0 35.8 0 30.6c0-6.2 1.7-12 5.1-17.4C8.5 7.8 13.3 3.4 19.5 0l6.9 8.4c-4 2.6-7.1 5.4-9.3 8.4-2.1 3-3.4 5.9-3.8 8.7 1-.5 2.2-.8 3.6-.8 3.7 0 6.7 1.2 9 3.6 2.3 2.4 3.5 5.4 3.5 9 0 3.7-1.3 6.8-3.8 9.3-2.5 2.4-5.6 3.4-9 3.4zm34.5 0c-4.6 0-8.3-1.6-10.8-4.8-2.5-3.2-3.8-7.4-3.8-12.6 0-6.2 1.7-12 5.1-17.4C43 7.8 47.8 3.4 54 0l6.9 8.4c-4 2.6-7.1 5.4-9.3 8.4-2.1 3-3.4 5.9-3.8 8.7 1-.5 2.2-.8 3.6-.8 3.7 0 6.7 1.2 9 3.6 2.3 2.4 3.5 5.4 3.5 9 0 3.7-1.3 6.8-3.8 9.3-2.5 2.4-5.6 3.4-9 3.4z"
+                        fill="currentColor" />
+                </svg>
+
+                <div class="testimonial-track-wrap">
+                    <ul class="testimonial-track" id="testimonial-track">
+                        <li class="testimonial-slide">
+                            <div class="testimonial-stars" aria-hidden="true">★★★★★</div>
+                            <p class="testimonial-quote">"Our quarterly planning used to take three weeks of
+                                back-and-forth emails. With Goalytics, we finalized our entire OKR set in a single
+                                90-minute session — with more buy-in than we've ever had."</p>
+                            <div class="testimonial-author">
+                                <div class="testimonial-avatar" style="background:#2b77cc">SC</div>
+                                <div class="testimonial-author-info">
+                                    <strong class="testimonial-name">Sarah Chen</strong>
+                                    <span class="testimonial-role">VP of Engineering, Lumina Health</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="testimonial-slide">
+                            <div class="testimonial-stars" aria-hidden="true">★★★★★</div>
+                            <p class="testimonial-quote">"The AI suggestions aren't generic — they're grounded in our
+                                actual strategy docs. It genuinely feels like having a strategy consultant sitting in
+                                every session."</p>
+                            <div class="testimonial-author">
+                                <div class="testimonial-avatar" style="background:#12b76a">JO</div>
+                                <div class="testimonial-author-info">
+                                    <strong class="testimonial-name">James Okafor</strong>
+                                    <span class="testimonial-role">COO, Brightpath Logistics</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="testimonial-slide">
+                            <div class="testimonial-stars" aria-hidden="true">★★★★★</div>
+                            <p class="testimonial-quote">"Watching the whole team vote on goals in real time changed
+                                how we run planning forever. No more mystery meetings where decisions get made without
+                                us."</p>
+                            <div class="testimonial-author">
+                                <div class="testimonial-avatar" style="background:#7a5af8">EP</div>
+                                <div class="testimonial-author-info">
+                                    <strong class="testimonial-name">Elena Petrova</strong>
+                                    <span class="testimonial-role">Head of Product, Nordic Robotics</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="testimonial-slide">
+                            <div class="testimonial-stars" aria-hidden="true">★★★★★</div>
+                            <p class="testimonial-quote">"We went from spreadsheet chaos to a single source of truth.
+                                The weightage engine alone saved our leadership team hours of debate every
+                                quarter."</p>
+                            <div class="testimonial-author">
+                                <div class="testimonial-avatar" style="background:#dc6803">MW</div>
+                                <div class="testimonial-author-info">
+                                    <strong class="testimonial-name">Marcus Webb</strong>
+                                    <span class="testimonial-role">CEO, Fenwick &amp; Rowe</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="testimonial-slide">
+                            <div class="testimonial-stars" aria-hidden="true">★★★★★</div>
+                            <p class="testimonial-quote">"Snapshot comparisons gave us a clear before-and-after story
+                                for our board deck. It's the first time OKRs actually helped us tell a story about
+                                progress."</p>
+                            <div class="testimonial-author">
+                                <div class="testimonial-avatar" style="background:#c11574">PR</div>
+                                <div class="testimonial-author-info">
+                                    <strong class="testimonial-name">Priya Raman</strong>
+                                    <span class="testimonial-role">Director of Strategy, Solstice Retail Group</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="testimonial-slide">
+                            <div class="testimonial-stars" aria-hidden="true">★★★★★</div>
+                            <p class="testimonial-quote">"Rolling this out across five departments could've been a
+                                nightmare. The role-based access and live dashboards made it feel effortless."</p>
+                            <div class="testimonial-author">
+                                <div class="testimonial-avatar" style="background:#d92d20">TA</div>
+                                <div class="testimonial-author-info">
+                                    <strong class="testimonial-name">Tom Alvarez</strong>
+                                    <span class="testimonial-role">Head of People Ops, CedarPoint Financial</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <button class="slider-arrow slider-arrow-prev" id="slider-prev" aria-label="Previous testimonial">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <polyline points="15 18 9 12 15 6" />
+                    </svg>
+                </button>
+                <button class="slider-arrow slider-arrow-next" id="slider-next" aria-label="Next testimonial">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <polyline points="9 18 15 12 9 6" />
+                    </svg>
+                </button>
+
+                <div class="slider-dots" id="slider-dots" role="tablist" aria-label="Choose testimonial"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         10. CONTACT
     ═══════════════════════════════════════════════ -->
     <section id="contact">
         <div class="container">
@@ -839,7 +1057,7 @@
     </section>
 
     <!-- ═══════════════════════════════════════════════
-         9. FOOTER
+         11. FOOTER
     ═══════════════════════════════════════════════ -->
     <footer id="footer">
         <div class="container">

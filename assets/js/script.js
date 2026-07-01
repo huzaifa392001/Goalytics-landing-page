@@ -13,6 +13,9 @@
  *  9. Mockup: pulsing + floating cards
  * 10. Contact form: JS validation + submit handler
  * 11. Footer: year
+ * 12. Smooth scroll for anchor links
+ * 13. Feature/AI card hover
+ * 14. Testimonials: slider (autoplay, arrows, dots, swipe, keyboard)
  */
 
 /* ─── 1. Setup ──────────────────────────────────────────────────────── */
@@ -290,6 +293,50 @@ if (!prefersReducedMotion) {
     });
 }
 
+/* ─── 9b. Our Story: Stacked Bar Chart Animation ─────────────────────── */
+
+if (!prefersReducedMotion) {
+    document.querySelectorAll('.chart-bar-stack').forEach(stack => {
+        const segments = Array.from(stack.querySelectorAll('.bar-segment'));
+
+        segments.forEach(seg => {
+            seg.dataset.targetHeight = seg.style.height;
+            seg.style.height = '0px';
+            const valueEl = seg.querySelector('.seg-value');
+            if (valueEl) valueEl.textContent = '0';
+        });
+
+        ScrollTrigger.create({
+            trigger: stack,
+            start: 'top 85%',
+            once: true,
+            onEnter: () => {
+                segments.forEach((seg, i) => {
+                    gsap.to(seg, {
+                        height: seg.dataset.targetHeight,
+                        duration: 0.9,
+                        delay: i * 0.15,
+                        ease: 'power3.out'
+                    });
+
+                    const valueEl = seg.querySelector('.seg-value');
+                    if (!valueEl) return;
+                    const target = parseFloat(valueEl.dataset.target);
+                    const counter = { val: 0 };
+                    gsap.to(counter, {
+                        val: target,
+                        duration: 0.9,
+                        delay: i * 0.15,
+                        ease: 'power3.out',
+                        onUpdate: () => { valueEl.textContent = Math.round(counter.val); },
+                        onComplete: () => { valueEl.textContent = target; }
+                    });
+                });
+            }
+        });
+    });
+}
+
 /* ─── 10. Collaborative & About Sections: Parallax Tilt ─────────────── */
 
 if (!prefersReducedMotion && window.innerWidth > 768) {
@@ -523,4 +570,129 @@ if (!prefersReducedMotion) {
             gsap.to(card, { y: 0, duration: 0.5, ease: 'elastic.out(1, 0.4)' });
         });
     });
+}
+
+/* ─── 14. Testimonials Slider ────────────────────────────────────────── */
+
+const testimonialSlider = document.getElementById('testimonial-slider');
+
+if (testimonialSlider) {
+    const track = document.getElementById('testimonial-track');
+    const slides = Array.from(track.children);
+    const prevBtn = document.getElementById('slider-prev');
+    const nextBtn = document.getElementById('slider-next');
+    const dotsWrap = document.getElementById('slider-dots');
+    const AUTOPLAY_MS = 6000;
+
+    let current = 0;
+    let autoplayTimer = null;
+
+    // Build one dot per slide
+    slides.forEach((slide, i) => {
+        const dot = document.createElement('button');
+        dot.className = 'slider-dot';
+        dot.type = 'button';
+        dot.setAttribute('role', 'tab');
+        dot.setAttribute('aria-label', `Go to testimonial ${i + 1} of ${slides.length}`);
+        dot.addEventListener('click', () => goTo(i, true));
+        dotsWrap.appendChild(dot);
+
+        slide.setAttribute('aria-roledescription', 'slide');
+        slide.setAttribute('aria-label', `${i + 1} of ${slides.length}`);
+    });
+    const dots = Array.from(dotsWrap.children);
+
+    function render() {
+        track.style.transform = `translateX(-${current * 100}%)`;
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('is-active', i === current);
+            dot.setAttribute('aria-selected', String(i === current));
+        });
+        slides.forEach((slide, i) => {
+            slide.setAttribute('aria-hidden', String(i !== current));
+        });
+    }
+
+    function goTo(index, userInitiated) {
+        current = (index + slides.length) % slides.length;
+        render();
+        if (userInitiated) restartAutoplay();
+    }
+
+    function next() { goTo(current + 1); }
+    function prev() { goTo(current - 1); }
+
+    function startAutoplay() {
+        if (prefersReducedMotion || slides.length < 2) return;
+        stopAutoplay();
+        autoplayTimer = setInterval(next, AUTOPLAY_MS);
+    }
+
+    function stopAutoplay() {
+        if (autoplayTimer) clearInterval(autoplayTimer);
+        autoplayTimer = null;
+    }
+
+    function restartAutoplay() {
+        stopAutoplay();
+        startAutoplay();
+    }
+
+    prevBtn.addEventListener('click', () => { prev(); restartAutoplay(); });
+    nextBtn.addEventListener('click', () => { next(); restartAutoplay(); });
+
+    // Pause on hover / focus, resume on leave / blur
+    testimonialSlider.addEventListener('mouseenter', stopAutoplay);
+    testimonialSlider.addEventListener('mouseleave', startAutoplay);
+    testimonialSlider.addEventListener('focusin', stopAutoplay);
+    testimonialSlider.addEventListener('focusout', startAutoplay);
+
+    // Keyboard navigation
+    testimonialSlider.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') { prev(); restartAutoplay(); }
+        else if (e.key === 'ArrowRight') { next(); restartAutoplay(); }
+    });
+
+    // Touch / mouse swipe
+    let dragStartX = null;
+    let dragDeltaX = 0;
+
+    function onDragStart(x) {
+        dragStartX = x;
+        dragDeltaX = 0;
+        stopAutoplay();
+        track.style.transition = 'none';
+    }
+
+    function onDragMove(x) {
+        if (dragStartX === null) return;
+        dragDeltaX = x - dragStartX;
+        const percent = (dragDeltaX / testimonialSlider.offsetWidth) * 100;
+        track.style.transform = `translateX(calc(-${current * 100}% + ${percent}%))`;
+    }
+
+    function onDragEnd() {
+        if (dragStartX === null) return;
+        track.style.transition = '';
+
+        const threshold = testimonialSlider.offsetWidth * 0.15;
+        if (dragDeltaX > threshold) prev();
+        else if (dragDeltaX < -threshold) next();
+        else render();
+
+        dragStartX = null;
+        dragDeltaX = 0;
+        startAutoplay();
+    }
+
+    track.addEventListener('touchstart', (e) => onDragStart(e.touches[0].clientX), { passive: true });
+    track.addEventListener('touchmove', (e) => onDragMove(e.touches[0].clientX), { passive: true });
+    track.addEventListener('touchend', onDragEnd);
+
+    track.addEventListener('mousedown', (e) => { e.preventDefault(); onDragStart(e.clientX); });
+    window.addEventListener('mousemove', (e) => onDragMove(e.clientX));
+    window.addEventListener('mouseup', onDragEnd);
+
+    render();
+    startAutoplay();
 }
