@@ -27,7 +27,7 @@
             </a>
 
             <ul class="nav-links" id="nav-links">
-                <li><a href="#about">About</a></li>
+                <li><a href="#about">Problem &amp; Solution</a></li>
                 <li><a href="#features">Features</a></li>
                 <li><a href="#collaborative">Sessions</a></li>
                 <li><a href="#team">Team</a></li>
@@ -99,83 +99,36 @@
                 </div>
             </div>
 
-            <!-- Right: Session Mockup -->
+            <!-- Right: Product Screenshot -->
             <div class="hero-mockup" id="hero-mockup"
-                aria-label="Product screenshot showing a live collaborative session">
-                <div class="mockup-card">
-                    <div class="mockup-header">
-                        <div class="mockup-session-info">
-                            <div class="live-badge">
-                                <span class="live-dot" aria-hidden="true"></span>
-                                Live Session
-                            </div>
-                            <span class="mockup-session-name">Q3 Strategy — Engineering</span>
-                        </div>
-                        <div class="mockup-avatars">
-                            <div class="m-avatar" style="background:#2b77cc" title="Ali H.">AH</div>
-                            <div class="m-avatar" style="background:#12b76a" title="Sara K.">SK</div>
-                            <div class="m-avatar" style="background:#f79009" title="Mike P.">MP</div>
-                            <div class="m-avatar m-avatar-more" title="4 more">+4</div>
-                        </div>
+                aria-label="Product screenshot showing the Goalytics organizational tree view">
+                <div class="visual-glow" aria-hidden="true"></div>
+
+                <div class="browser-frame">
+                    <div class="browser-frame-bar">
+                        <span class="bf-dot" style="background:#f04438;"></span>
+                        <span class="bf-dot" style="background:#f79009;"></span>
+                        <span class="bf-dot" style="background:#12b76a;"></span>
+                        <a href="https://portal.goalytics.io" class="bf-url" target="_blank"
+                            rel="noopener noreferrer">portal.goalytics.io</a>
                     </div>
-
-                    <div class="mockup-step-label">Step 1 of 4 — Define Goals</div>
-
-                    <div class="mockup-goals">
-                        <div class="m-goal-card m-goal-selected">
-                            <div class="m-goal-content">Increase platform reliability to 99.9% uptime</div>
-                            <div class="m-goal-footer">
-                                <span class="m-like-btn"><svg width="12" height="12" viewBox="0 0 24 24"
-                                        fill="currentColor" aria-hidden="true">
-                                        <path
-                                            d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14z" />
-                                    </svg> 9</span>
-                                <span class="m-check" aria-label="Selected">✓</span>
-                            </div>
-                        </div>
-                        <div class="m-goal-card">
-                            <div class="m-goal-content">Ship 3 enterprise integrations this quarter</div>
-                            <div class="m-goal-footer">
-                                <span class="m-like-btn"><svg width="12" height="12" viewBox="0 0 24 24"
-                                        fill="currentColor" aria-hidden="true">
-                                        <path
-                                            d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14z" />
-                                    </svg> 7</span>
-                                <span class="m-ai-tag">AI</span>
-                            </div>
-                        </div>
-                        <div class="m-goal-card m-goal-adding">
-                            <div class="m-goal-content m-typing">Reduce deployment time by 60%<span
-                                    class="cursor">|</span></div>
-                            <div class="m-goal-footer">
-                                <span class="m-typing-label">Sara is typing…</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mockup-ai-strip">
-                        <span class="mockup-ai-icon" aria-hidden="true">✦</span>
-                        <span>AI has 3 goal suggestions ready</span>
-                        <button class="mockup-ai-btn">View</button>
+                    <div class="browser-frame-body">
+                        <img src="/assets/images/tree-2.png"
+                            alt="Goalytics organizational tree showing goals, objectives, and key results linked across an organization">
                     </div>
                 </div>
 
-                <!-- Floating decorative cards -->
                 <div class="float-card float-card-1" aria-hidden="true">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--primary-600)"
                         stroke-width="2" stroke-linecap="round" aria-hidden="true">
                         <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
                         <polyline points="17 6 23 6 23 12" />
                     </svg>
-                    <span>78% complete</span>
+                    <span>75% org alignment</span>
                 </div>
                 <div class="float-card float-card-2" aria-hidden="true">
-                    <span class="float-icon">🎯</span>
-                    <span>12 goals finalized</span>
-                </div>
-                <div class="float-card float-card-3" aria-hidden="true">
                     <span class="float-icon">✦</span>
-                    <span>AI suggestion applied</span>
+                    <span>AI-linked goals</span>
                 </div>
             </div>
         </div>
@@ -200,19 +153,19 @@
                     </div>
                 </div>
 
-                <svg class="story-arrow reveal" width="120" height="90" viewBox="0 0 120 90" fill="none"
-                    aria-hidden="true">
-                    <defs>
-                        <marker id="story-arrow-head" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6"
-                            markerHeight="6" orient="auto-start-reverse">
-                            <path d="M0,0 L10,5 L0,10 z" fill="var(--primary-500)" />
-                        </marker>
-                    </defs>
-                    <path d="M4 10 C 46 4, 78 46, 112 78" stroke="var(--primary-500)" stroke-width="2.5"
-                        stroke-linecap="round" stroke-dasharray="1 8" marker-end="url(#story-arrow-head)" />
-                </svg>
-
                 <div class="story-chart-card reveal">
+
+                    <svg class="story-arrow reveal" width="120" height="90" viewBox="0 0 120 90" fill="none"
+                        aria-hidden="true">
+                        <defs>
+                            <marker id="story-arrow-head" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6"
+                                markerHeight="6" orient="auto-start-reverse">
+                                <path d="M0,0 L10,5 L0,10 z" fill="var(--primary-500)" />
+                            </marker>
+                        </defs>
+                        <path d="M4 10 C 46 4, 78 46, 112 78" stroke="var(--primary-500)" stroke-width="2.5"
+                            stroke-linecap="round" stroke-dasharray="1 8" marker-end="url(#story-arrow-head)" />
+                    </svg>
                     <div class="story-chart-header">
                         <h3 class="story-chart-title">Weekly Hours per FTE</h3>
                     </div>
@@ -258,7 +211,7 @@
                                     <div class="bar-segment" style="height:210px;background:#6D28D9;">
                                         <span class="seg-value" data-target="30">30</span>
                                     </div>
-                                    <div class="bar-segment bar-segment-thin" style="height:7px;background:#86EFAC;">
+                                    <div class="bar-segment bar-segment-thin" style="background:#86EFAC;">
                                         <span class="seg-value" data-target="1">1</span>
                                     </div>
                                     <div class="bar-segment" style="height:35px;background:#3B82F6;">
@@ -283,59 +236,164 @@
     </section>
 
     <!-- ═══════════════════════════════════════════════
-         3. ABOUT
+         3. PROBLEM & SOLUTION — SCROLL STORY
     ═══════════════════════════════════════════════ -->
-    <section id="about">
-        <div class="container">
-            <div class="section-label reveal">The Problem We Solve</div>
-            <h2 class="section-title reveal">OKRs fail when goals<br>are set <em>in isolation.</em></h2>
+    <section id="about" class="problem-solution">
+        <div class="ps-pin">
+            <div class="container ps-container">
 
-            <div class="about-grid">
-                <div class="about-card about-problem reveal">
-                    <div class="about-card-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" aria-hidden="true">
-                            <circle cx="12" cy="12" r="10" />
-                            <line x1="12" y1="8" x2="12" y2="12" />
-                            <line x1="12" y1="16" x2="12.01" y2="16" />
-                        </svg>
+                <div class="ps-progress">
+                    <span class="ps-progress-phase is-active" data-phase="problem">The Problem</span>
+                    <div class="ps-progress-track">
+                        <div class="ps-progress-fill" id="ps-progress-fill"></div>
                     </div>
-                    <h3>The Old Way</h3>
-                    <p>Leadership sets goals top-down. Teams are told to execute. No one fully understands the why.
-                        Engagement drops, alignment breaks, and goals become box-checking exercises by Q4.</p>
-                    <ul class="about-list">
-                        <li>Siloed goal-setting with zero team input</li>
-                        <li>No shared context between leaders and executors</li>
-                        <li>Quarterly reviews reveal misalignment too late</li>
-                    </ul>
+                    <span class="ps-progress-phase" data-phase="solution">The Solution</span>
                 </div>
 
-                <div class="about-arrow reveal" aria-hidden="true">
-                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--primary-500)"
-                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="5" y1="12" x2="19" y2="12" />
-                        <polyline points="12 5 19 12 12 19" />
-                    </svg>
-                </div>
+                <div class="ps-grid">
+                    <div class="ps-stage" id="ps-stage">
 
-                <div class="about-card about-solution reveal">
-                    <div class="about-card-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" aria-hidden="true">
-                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                            <polyline points="22 4 12 14.01 9 11.01" />
-                        </svg>
+                        <article class="ps-panel is-active" data-phase="intro" data-stat="83">
+                            <div class="section-label">The Problem We Solve</div>
+                            <h2 class="ps-headline">OKRs are proven to work.<br>Most teams still can't
+                                <em>make them work.</em>
+                            </h2>
+                            <p class="ps-body">83% of companies using OKRs report clear, tangible benefits. Yet
+                                leadership teams keep hitting the same wall, quarter after quarter. Scroll to see
+                                where it breaks — and how we fix it.</p>
+                        </article>
+
+                        <article class="ps-panel" data-phase="problem" data-stat="15">
+                            <div class="ps-kicker">Challenge 1 of 4</div>
+                            <h3>Misaligned Teams</h3>
+                            <p>Lack of clarity on goals leads to inefficiencies and wasted effort across the
+                                organization.</p>
+                            <div class="ps-callout">25% slower decision-making leads to <strong>15% revenue
+                                    lost</strong> to missed growth opportunities.</div>
+                        </article>
+
+                        <article class="ps-panel" data-phase="problem" data-stat="30">
+                            <div class="ps-kicker">Challenge 2 of 4</div>
+                            <h3>Siloed Operations</h3>
+                            <p>Departments and projects operate in isolation, creating fragmented insights no one can
+                                act on.</p>
+                            <div class="ps-callout"><strong>30% of time</strong> burned on manual data collection
+                                and reporting.</div>
+                        </article>
+
+                        <article class="ps-panel" data-phase="problem" data-stat="20">
+                            <div class="ps-kicker">Challenge 3 of 4</div>
+                            <h3>Delayed Decision-Making</h3>
+                            <p>Without real-time data, progress stalls and growth slows to a crawl.</p>
+                            <div class="ps-callout"><strong>20% higher</strong> operational costs from fragmented
+                                systems.</div>
+                        </article>
+
+                        <article class="ps-panel" data-phase="problem" data-stat="40">
+                            <div class="ps-kicker">Challenge 4 of 4</div>
+                            <h3>Manual Reporting &amp; Disengagement</h3>
+                            <p>Time-consuming manual processes drain resources, increase errors, and leave people
+                                feeling disconnected from the mission.</p>
+                            <div class="ps-callout"><strong>40% of employees</strong> feel their work doesn't
+                                contribute to organizational success.</div>
+                        </article>
+
+                        <article class="ps-panel ps-panel-pivot" data-phase="pivot">
+                            <div class="ps-kicker">The Turning Point</div>
+                            <h3>Enter Goalytics.</h3>
+                            <blockquote class="ps-quote">"I spend half my time fixing what should be saving us
+                                time."<cite>— CPG Brand Manager</cite></blockquote>
+                            <p>One unified, AI-powered platform — built to close the gap between strategy and
+                                execution.</p>
+                        </article>
+
+                        <article class="ps-panel" data-phase="solution" data-stat="100">
+                            <div class="ps-kicker">Fix 1 of 4</div>
+                            <h3>Centralized Goal Tracking</h3>
+                            <p>Monitor individual, project, and department goals in one unified platform.</p>
+                            <div class="ps-callout ps-callout-positive">Breaks silos and ensures <strong>alignment
+                                    across every team.</strong></div>
+                        </article>
+
+                        <article class="ps-panel" data-phase="solution" data-stat="40">
+                            <div class="ps-kicker">Fix 2 of 4</div>
+                            <h3>Real-Time Insights</h3>
+                            <p>Access live data the moment it changes, for faster, smarter decision-making.</p>
+                            <div class="ps-callout ps-callout-positive"><strong>40% reduction</strong> in
+                                decision-making time.</div>
+                        </article>
+
+                        <article class="ps-panel" data-phase="solution" data-stat="30">
+                            <div class="ps-kicker">Fix 3 of 4</div>
+                            <h3>AI-Powered Automation</h3>
+                            <p>AI automates goal-setting, progress tracking, and reporting — end to end.</p>
+                            <div class="ps-callout ps-callout-positive"><strong>30% of time</strong> saved on manual
+                                tasks.</div>
+                        </article>
+
+                        <article class="ps-panel" data-phase="solution" data-stat="50">
+                            <div class="ps-kicker">Fix 4 of 4</div>
+                            <h3>Aligned Employee Engagement</h3>
+                            <p>Personal goals connect directly to organizational success, and everyone can see it.
+                            </p>
+                            <div class="ps-callout ps-callout-positive"><strong>50% boost</strong> in employee
+                                motivation.</div>
+                        </article>
+
+                        <article class="ps-panel ps-panel-outcome" data-phase="outcome">
+                            <div class="ps-kicker">The Outcome</div>
+                            <h3>Faster. Stronger. More sustainable.</h3>
+                            <p>Teams running on Goalytics see the difference within a single quarter.</p>
+                            <div class="ps-outcome-grid">
+                                <div class="ps-outcome-stat">
+                                    <strong class="ps-outcome-num" data-target="25">0</strong><span>%</span>
+                                    <label>Higher growth</label>
+                                </div>
+                                <div class="ps-outcome-stat">
+                                    <strong class="ps-outcome-num" data-target="40">0</strong><span>%</span>
+                                    <label>Less manual processing</label>
+                                </div>
+                                <div class="ps-outcome-stat">
+                                    <strong class="ps-outcome-num" data-target="30">0</strong><span>%</span>
+                                    <label>Less management overhead</label>
+                                </div>
+                                <div class="ps-outcome-stat">
+                                    <strong class="ps-outcome-num" data-target="20">0</strong><span>%</span>
+                                    <label>More team productivity</label>
+                                </div>
+                            </div>
+                            <a href="#features" class="btn btn-primary">See What You Get</a>
+                        </article>
+
                     </div>
-                    <h3>The Goalytics Way</h3>
-                    <p>Every session is a live collaborative workspace. Goals are built with your team — not handed down
-                        to them. The result is alignment that sticks, accountability that's intrinsic, and progress
-                        that's visible.</p>
-                    <ul class="about-list">
-                        <li>Real-time sessions where every voice is heard</li>
-                        <li>AI ensures structure and completeness</li>
-                        <li>Live dashboards keep everyone on the same page</li>
-                    </ul>
+
+                    <div class="ps-visual" id="ps-visual">
+                        <div class="ps-ring-wrap phase-intro" id="ps-ring-wrap">
+                            <svg class="ps-ring" viewBox="0 0 120 120" aria-hidden="true">
+                                <circle class="ps-ring-bg" cx="60" cy="60" r="52"></circle>
+                                <circle class="ps-ring-fg" id="ps-ring-fg" cx="60" cy="60" r="52"></circle>
+                            </svg>
+                            <div class="ps-ring-value">
+                                <strong id="ps-ring-num">0</strong><span>%</span>
+                            </div>
+                        </div>
+                        <div class="ps-visual-icon" id="ps-visual-icon" aria-hidden="true">
+                            <svg data-icon="pivot" width="72" height="72" viewBox="0 0 24 24" fill="none"
+                                stroke="var(--primary-500)" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                                <polyline points="22 4 12 14.01 9 11.01" />
+                            </svg>
+                            <svg data-icon="outcome" width="72" height="72" viewBox="0 0 24 24" fill="none"
+                                stroke="var(--success)" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                                <polyline points="9 12 11 14 15 10" />
+                            </svg>
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -346,13 +404,13 @@
     <section id="features">
         <div class="container">
             <div class="section-label reveal">What You Get</div>
-            <h2 class="section-title reveal">Everything your team needs<br>to set and achieve goals</h2>
-            <p class="section-sub reveal">Built on a structured OKR framework with real-time collaboration and AI
+            <h2 class="section-title reveal ai-title">Everything your team needs<br>to set and achieve goals</h2>
+            <p class="section-sub reveal ai-sub">Built on a structured OKR framework with real-time collaboration and AI
                 assistance at every step.</p>
 
             <div class="features-grid">
                 <!-- Feature 1 -->
-                <div class="feature-card reveal">
+                <div class="feature-card">
                     <div class="feature-icon" style="--icon-bg: #e4ecfa; --icon-color: #2b77cc;">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2" stroke-linecap="round" aria-hidden="true">
@@ -368,7 +426,7 @@
                 </div>
 
                 <!-- Feature 2 -->
-                <div class="feature-card reveal">
+                <div class="feature-card">
                     <div class="feature-icon" style="--icon-bg: #ebe9fe; --icon-color: #7a5af8;">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2" stroke-linecap="round" aria-hidden="true">
@@ -381,7 +439,7 @@
                 </div>
 
                 <!-- Feature 3 -->
-                <div class="feature-card reveal">
+                <div class="feature-card">
                     <div class="feature-icon" style="--icon-bg: #d1fadf; --icon-color: #039855;">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2" stroke-linecap="round" aria-hidden="true">
@@ -395,7 +453,7 @@
                 </div>
 
                 <!-- Feature 4 -->
-                <div class="feature-card reveal">
+                <div class="feature-card">
                     <div class="feature-icon" style="--icon-bg: #fef0c7; --icon-color: #dc6803;">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2" stroke-linecap="round" aria-hidden="true">
@@ -410,7 +468,7 @@
                 </div>
 
                 <!-- Feature 5 -->
-                <div class="feature-card reveal">
+                <div class="feature-card">
                     <div class="feature-icon" style="--icon-bg: #fee4e2; --icon-color: #d92d20;">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2" stroke-linecap="round" aria-hidden="true">
@@ -426,7 +484,7 @@
                 </div>
 
                 <!-- Feature 6 -->
-                <div class="feature-card reveal">
+                <div class="feature-card">
                     <div class="feature-icon" style="--icon-bg: #fdf2fa; --icon-color: #c11574;">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2" stroke-linecap="round" aria-hidden="true">
@@ -441,7 +499,7 @@
                 </div>
 
                 <!-- Feature 7 -->
-                <div class="feature-card reveal">
+                <div class="feature-card">
                     <div class="feature-icon" style="--icon-bg: #f4f3ff; --icon-color: #5925dc;">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2" stroke-linecap="round" aria-hidden="true">
@@ -456,7 +514,7 @@
                 </div>
 
                 <!-- Feature 8 -->
-                <div class="feature-card reveal">
+                <div class="feature-card">
                     <div class="feature-icon" style="--icon-bg: #fef6ee; --icon-color: #b93815;">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2" stroke-linecap="round" aria-hidden="true">
@@ -603,112 +661,79 @@
                     <p>Goalytics sessions are powered by WebSocket technology, meaning every action — a new goal added,
                         a like given, a comment posted — is instantly visible to every participant in the room. No
                         refreshing, no waiting, no back-and-forth emails.</p>
-
-                    <figure class="collab-session-image">
-                        <img src="/assets/images/session.jpg" alt="">
-                    </figure>
-
-                </div>
-                <div class="collab-features">
-                    <div class="collab-feature">
-                        <div class="cf-dot" style="background: var(--primary-500);" aria-hidden="true"></div>
-                        <div>
-                            <strong>Live Presence</strong>
-                            <p>See who's currently in the session with a live connected-users panel. Know exactly
-                                who's working alongside you.</p>
-                        </div>
-                    </div>
-                    <div class="collab-feature">
-                        <div class="cf-dot" style="background: var(--success);" aria-hidden="true"></div>
-                        <div>
-                            <strong>Voting & Reactions</strong>
-                            <p>Team members like goals and objectives to surface the most important ideas. Admin
-                                uses vote counts to guide finalization decisions.</p>
-                        </div>
-                    </div>
-                    <div class="collab-feature">
-                        <div class="cf-dot" style="background: #7a5af8;" aria-hidden="true"></div>
-                        <div>
-                            <strong>Live Chat</strong>
-                            <p>A built-in session chat lets the team discuss ideas without leaving the workspace.
-                                Context stays in the session where it belongs.</p>
-                        </div>
-                    </div>
-                    <div class="collab-feature">
-                        <div class="cf-dot" style="background: #f79009;" aria-hidden="true"></div>
-                        <div>
-                            <strong>Three Session Modes</strong>
-                            <p><strong>Solo:</strong> work through your OKRs on your own, with AI assistance at every
-                                step. <strong>Collaborative:</strong> your whole team builds goals together, live and in
-                                real time. <strong>Agentic:</strong> AI drives the full OKR structure — you simply
-                                review and refine.</p>
-                        </div>
-                    </div>
-                    <div class="collab-feature">
-                        <div class="cf-dot" style="background: #f04438;" aria-hidden="true"></div>
-                        <div>
-                            <strong>Re-Collaboration</strong>
-                            <p>Need to revisit a previous goal? Goalytics supports re-collaboration sessions that
-                                update existing OKRs without losing the historical record.</p>
-                        </div>
-                    </div>
                 </div>
 
-                <!-- <div class="collab-visual reveal" aria-label="Session interface visual">
-                    <div class="collab-card collab-main-card">
-                        <div class="collab-card-header">
-                            <span class="collab-card-title">Objective Weightage</span>
-                            <span class="collab-card-sub">3 objectives · All locked</span>
+                <div class="collab-visual" aria-label="Screenshot of a live Goalytics collaborative session">
+                    <div class="visual-glow" aria-hidden="true"></div>
+
+                    <div class="browser-frame">
+                        <div class="browser-frame-bar">
+                            <span class="bf-dot" style="background:#f04438;"></span>
+                            <span class="bf-dot" style="background:#f79009;"></span>
+                            <span class="bf-dot" style="background:#12b76a;"></span>
+                            <a href="https://portal.goalytics.io" class="bf-url" target="_blank"
+                                rel="noopener noreferrer">portal.goalytics.io/session</a>
                         </div>
-                        <div class="weightage-row">
-                            <span class="wr-label">Improve API performance</span>
-                            <div class="wr-bar-wrap">
-                                <div class="wr-bar" style="width:40%"></div>
-                            </div>
-                            <span class="wr-pct">40%</span>
-                        </div>
-                        <div class="weightage-row">
-                            <span class="wr-label">Reduce error rate</span>
-                            <div class="wr-bar-wrap">
-                                <div class="wr-bar" style="width:35%"></div>
-                            </div>
-                            <span class="wr-pct">35%</span>
-                        </div>
-                        <div class="weightage-row">
-                            <span class="wr-label">Improve test coverage</span>
-                            <div class="wr-bar-wrap">
-                                <div class="wr-bar" style="width:25%"></div>
-                            </div>
-                            <span class="wr-pct">25%</span>
-                        </div>
-                        <div class="weightage-total">
-                            <span>Total</span>
-                            <strong>100%</strong>
-                        </div>
-                        <div class="ai-suggest-strip">
-                            <span>✦ AI suggests: 45% / 30% / 25%</span>
-                            <button class="apply-btn">Apply</button>
+                        <div class="browser-frame-body">
+                            <img src="/assets/images/session.jpg"
+                                alt="Live Goalytics session with team members setting and voting on goals together in real time">
                         </div>
                     </div>
 
-                    <div class="collab-mini-card collab-mini-1">
-                        <div class="mini-avatars">
-                            <div class="sm-avatar" style="background:#2b77cc">A</div>
-                            <div class="sm-avatar" style="background:#12b76a">S</div>
-                            <div class="sm-avatar" style="background:#f79009">M</div>
-                        </div>
-                        <span>7 online now</span>
+                    <div class="float-card collab-float-1" aria-hidden="true">
+                        <span class="badge-dot" aria-hidden="true"></span>
+                        <span>6 people online</span>
                     </div>
+                    <div class="float-card collab-float-2" aria-hidden="true">
+                        <span class="float-icon">👍</span>
+                        <span>Goal liked by Sara</span>
+                    </div>
+                </div>
+            </div>
 
-                    <div class="collab-mini-card collab-mini-2">
-                        <div class="chat-bubble">
-                            <strong>Mike:</strong> Should we weight test coverage higher?
-                        </div>
-                        <div class="chat-bubble chat-bubble-own">
-                            <strong>You:</strong> AI says 25% is fine 👍
-                        </div>
+            <div class="collab-features">
+                <div class="collab-feature reveal">
+                    <div class="cf-dot" style="background: var(--primary-500);" aria-hidden="true"></div>
+                    <div>
+                        <h6>Live Presence</h6>
+                        <p>See who's currently in the session with a live connected-users panel. Know exactly
+                            who's working alongside you.</p>
                     </div>
-                </div> -->
+                </div>
+                <div class="collab-feature reveal">
+                    <div class="cf-dot" style="background: var(--success);" aria-hidden="true"></div>
+                    <div>
+                        <h6>Voting & Reactions</h6>
+                        <p>Team members like goals and objectives to surface the most important ideas. Admin
+                            uses vote counts to guide finalization decisions.</p>
+                    </div>
+                </div>
+                <div class="collab-feature reveal">
+                    <div class="cf-dot" style="background: #7a5af8;" aria-hidden="true"></div>
+                    <div>
+                        <h6>Live Chat</h6>
+                        <p>A built-in session chat lets the team discuss ideas without leaving the workspace.
+                            Context stays in the session where it belongs.</p>
+                    </div>
+                </div>
+                <div class="collab-feature reveal">
+                    <div class="cf-dot" style="background: #f79009;" aria-hidden="true"></div>
+                    <div>
+                        <h6>Three Session Modes</h6>
+                        <p><strong>Solo:</strong> work through your OKRs on your own, with AI assistance at every
+                            step. <strong>Collaborative:</strong> your whole team builds goals together, live and in
+                            real time. <strong>Fully Automated:</strong> AI drives the full OKR structure — you simply
+                            review and refine.</p>
+                    </div>
+                </div>
+                <div class="collab-feature reveal">
+                    <div class="cf-dot" style="background: #f04438;" aria-hidden="true"></div>
+                    <div>
+                        <h6>Re-Collaboration</h6>
+                        <p>Need to revisit a previous goal? Goalytics supports re-collaboration sessions that
+                            update existing OKRs without losing the historical record.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -725,7 +750,7 @@
                 brainstorm to long-term performance analysis.</p>
 
             <div class="ai-grid">
-                <div class="ai-card reveal">
+                <div class="ai-card">
                     <div class="ai-card-num">01</div>
                     <h3>Document-Grounded Context</h3>
                     <p>Upload strategy decks, briefs, or other org documents when creating an Organization or Team
@@ -733,56 +758,56 @@
                         strategy — not generic templates.</p>
                     <div class="ai-card-tag">Used in: Organization & Team Type Setup</div>
                 </div>
-                <div class="ai-card reveal">
+                <div class="ai-card">
                     <div class="ai-card-num">02</div>
                     <h3>Goal Generation</h3>
                     <p>AI analyzes your organization, team type, and historical context to generate a shortlist of
                         relevant, realistic strategic goals before your session even starts.</p>
                     <div class="ai-card-tag">Used in: Goal Setup</div>
                 </div>
-                <div class="ai-card reveal">
+                <div class="ai-card">
                     <div class="ai-card-num">03</div>
                     <h3>Objective Structuring</h3>
                     <p>For each finalized goal, AI proposes a set of well-defined, measurable objectives — saving hours
                         of structured thinking and prompting discussion among your team.</p>
                     <div class="ai-card-tag">Used in: Collaborative Session</div>
                 </div>
-                <div class="ai-card reveal">
+                <div class="ai-card">
                     <div class="ai-card-num">04</div>
                     <h3>Key Result Proposals</h3>
                     <p>AI drafts quantifiable key results — including metric, target value, unit, and baseline — so
                         every objective has a clear success measure from day one.</p>
                     <div class="ai-card-tag">Used in: Key Result Setup</div>
                 </div>
-                <div class="ai-card reveal">
+                <div class="ai-card">
                     <div class="ai-card-num">05</div>
                     <h3>Weightage Balancing</h3>
                     <p>AI recommends optimal percentage distributions across your objectives, ensuring priorities are
                         proportional to impact. Team can accept, modify, or apply its own values.</p>
                     <div class="ai-card-tag">Used in: Weightage Step</div>
                 </div>
-                <div class="ai-card reveal">
+                <div class="ai-card">
                     <div class="ai-card-num">06</div>
                     <h3>Dashboard Insights</h3>
                     <p>On any goal dashboard, trigger AI analysis to get plain-language performance commentary — what's
                         on track, what needs attention, and actionable recommendations.</p>
                     <div class="ai-card-tag">Used in: Goal Dashboard</div>
                 </div>
-                <div class="ai-card reveal">
+                <div class="ai-card">
                     <div class="ai-card-num">07</div>
                     <h3>Agentic Mode</h3>
                     <p>Enable fully autonomous AI sessions where AI proposes the complete OKR structure — goals,
                         objectives, key results, and weightages — for your team to review, refine, and finalize.</p>
                     <div class="ai-card-tag">Used in: Agentic Sessions</div>
                 </div>
-                <div class="ai-card reveal">
+                <div class="ai-card">
                     <div class="ai-card-num">08</div>
                     <h3>Snapshot Insights</h3>
                     <p>When a goal snapshot is taken, AI provides an interpretive analysis comparing it to previous
                         snapshots — surfacing trends and identifying risks before they become blockers.</p>
                     <div class="ai-card-tag">Used in: Snapshots</div>
                 </div>
-                <div class="ai-card reveal">
+                <div class="ai-card">
                     <div class="ai-card-num">09</div>
                     <h3>Comparison Reports</h3>
                     <p>Compare multiple goals side-by-side, or stack a goal's snapshots against each other over time —
@@ -1044,17 +1069,35 @@
                         <span class="btn-text">Send Message</span>
                         <span class="btn-spinner" aria-hidden="true" hidden></span>
                     </button>
-                    <div class="form-success" id="form-success" hidden role="status" aria-live="polite">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--success)"
-                            stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
-                            <polyline points="20 6 9 17 4 12" />
-                        </svg>
-                        <span>Message sent! We'll be in touch within 24 hours.</span>
-                    </div>
                 </form>
             </div>
         </div>
     </section>
+
+    <!-- ═══════════════════════════════════════════════
+         CONTACT SUCCESS MODAL
+    ═══════════════════════════════════════════════ -->
+    <div class="success-modal-overlay" id="success-modal-overlay" hidden>
+        <div class="success-modal" role="dialog" aria-modal="true" aria-labelledby="success-modal-title"
+            aria-describedby="success-modal-desc">
+            <button type="button" class="success-modal-close" id="success-modal-close" aria-label="Close">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" aria-hidden="true">
+                    <line x1="18" y1="6" x2="6" y2="18" />
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
+            </button>
+            <div class="success-modal-icon" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12" />
+                </svg>
+            </div>
+            <h3 id="success-modal-title">Message sent!</h3>
+            <p id="success-modal-desc">Thanks for reaching out — we'll be in touch within 24 hours.</p>
+            <button type="button" class="btn btn-primary success-modal-ok" id="success-modal-ok">Got it</button>
+        </div>
+    </div>
 
     <!-- ═══════════════════════════════════════════════
          11. FOOTER
@@ -1104,7 +1147,7 @@
                 <div class="footer-links-group">
                     <h4>Company</h4>
                     <ul>
-                        <li><a href="#about">About</a></li>
+                        <li><a href="#about">Problem &amp; Solution</a></li>
                         <li><a href="#team">Team</a></li>
                         <li><a href="#contact">Contact</a></li>
                         <!-- PLACEHOLDER: Add real links as they become available -->
@@ -1133,6 +1176,8 @@
     <!-- GSAP 3.12.5 — loaded via jsDelivr CDN (matches app's gsap ^3.13.0) -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <!-- Lenis — smooth scroll, synced to GSAP ScrollTrigger in script.js -->
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
     <script src="/assets/js/script.js"></script>
 </body>
 
