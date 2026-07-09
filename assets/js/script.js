@@ -18,7 +18,7 @@
  *  8. Features: staggered card reveal
  *  9. Features: weightage bars
  * 10. Features/AI: card hover spring bounce
- * 11. How It Works: progressive steps reveal
+ * 11. How It Works: horizontal pinned scroll pipeline (desktop), static stacked fallback (mobile/reduced motion)
  * 12. Collaborative: parallax tilt
  * 13. AI: staggered card reveal
  * 14. Testimonials: slider (autoplay, arrows, dots, swipe, keyboard)
@@ -471,51 +471,62 @@ function initAICardHover() {
     });
 }
 
-/* ─── 11. How It Works: Progressive Steps Reveal ─────────────────────── */
+/* ─── 11. How It Works: Horizontal Scroll Pipeline ────────────────────── */
 
-function animateSteps() {
-    // Initial hidden state (opacity/transform) lives in CSS on .steps-line,
-    // .step and .step-number; the reduced-motion media query forces them
-    // back to visible with no tween.
-    if (prefersReducedMotion) return;
+function initHorizontalSteps() {
+    const section = document.getElementById('how-it-works');
+    const pin = section ? section.querySelector('.steps-pin') : null;
+    const track = document.getElementById('steps-track');
+    if (!section || !pin || !track) return;
 
-    gsap.to('.steps-line', {
-        scaleY: 1,
-        duration: 1.2,
-        ease: 'power2.out',
+    const panels = gsap.utils.toArray('.step-panel', track);
+    const progressFill = document.getElementById('steps-progress-fill');
+    const progressCurrent = document.getElementById('steps-progress-current');
+
+    function setActivePanel(index) {
+        panels.forEach((p, i) => p.classList.toggle('is-active', i === index));
+        if (progressCurrent) progressCurrent.textContent = String(index + 1).padStart(2, '0');
+        if (progressFill) {
+            gsap.to(progressFill, {
+                width: `${(index / (panels.length - 1)) * 100}%`,
+                duration: 0.35,
+                ease: 'power2.out'
+            });
+        }
+    }
+
+    // Mobile / reduced motion: .steps-track is a plain static vertical
+    // column in CSS (no pin, no horizontal transform needed) — nothing to
+    // scroll-jack, so there's nothing further to wire up here.
+    const enableHorizontal = !prefersReducedMotion && window.matchMedia('(min-width: 901px)').matches;
+    if (!enableHorizontal) return;
+
+    section.classList.add('is-horizontal-mode');
+
+    // Distance the track needs to travel so its final panel lands flush
+    // with the viewport's right edge — recomputed on every ScrollTrigger
+    // refresh via invalidateOnRefresh, so it stays correct across resizes.
+    const getScrollDistance = () => Math.max(0, track.scrollWidth - window.innerWidth);
+
+    gsap.to(track, {
+        x: () => -getScrollDistance(),
+        ease: 'none',
         scrollTrigger: {
-            trigger: '.steps-container',
-            start: 'top 75%',
-            once: true
+            trigger: pin,
+            start: 'top top',
+            end: () => `+=${getScrollDistance()}`,
+            pin: true,
+            pinSpacing: true,
+            scrub: 0.7,
+            invalidateOnRefresh: true,
+            onUpdate: (self) => {
+                const idx = Math.min(panels.length - 1, Math.round(self.progress * (panels.length - 1)));
+                setActivePanel(idx);
+            }
         }
     });
 
-    gsap.to('.step', {
-        opacity: 1,
-        x: 0,
-        stagger: 0.18,
-        duration: 0.6,
-        ease: 'power3.out',
-        scrollTrigger: {
-            trigger: '.steps-container',
-            start: 'top 78%',
-            once: true
-        }
-    });
-
-    // Step numbers bounce in
-    gsap.to('.step-number', {
-        scale: 1,
-        stagger: 0.18,
-        duration: 0.5,
-        ease: 'back.out(2.5)',
-        delay: 0.3,
-        scrollTrigger: {
-            trigger: '.steps-container',
-            start: 'top 78%',
-            once: true
-        }
-    });
+    setActivePanel(0);
 }
 
 /* ─── 12. Collaborative: Parallax Tilt ────────────────────────────────── */
@@ -569,23 +580,42 @@ function initTestimonialSlider() {
     const dotsWrap = document.getElementById('slider-dots');
     const AUTOPLAY_MS = 6000;
 
+    // Cards visible at once: 3 on desktop, 2 on tablet, 1 on mobile —
+    // matches the .testimonial-slide flex-basis breakpoints in styles.css.
+    function getSlidesPerView() {
+        const w = window.innerWidth;
+        if (w <= 640) return 1;
+        if (w <= 900) return 2;
+        return 3;
+    }
+
+    let slidesPerView = getSlidesPerView();
+    let pageCount = Math.ceil(slides.length / slidesPerView);
     let current = 0;
     let autoplayTimer = null;
+    let dots = [];
 
-    // Build one dot per slide
     slides.forEach((slide, i) => {
-        const dot = document.createElement('button');
-        dot.className = 'slider-dot';
-        dot.type = 'button';
-        dot.setAttribute('role', 'tab');
-        dot.setAttribute('aria-label', `Go to testimonial ${i + 1} of ${slides.length}`);
-        dot.addEventListener('click', () => goTo(i, true));
-        dotsWrap.appendChild(dot);
-
         slide.setAttribute('aria-roledescription', 'slide');
         slide.setAttribute('aria-label', `${i + 1} of ${slides.length}`);
     });
-    const dots = Array.from(dotsWrap.children);
+
+    // Build one dot per page (a page = one screenful of cards)
+    function buildDots() {
+        dotsWrap.innerHTML = '';
+        dots = [];
+        for (let i = 0; i < pageCount; i++) {
+            const dot = document.createElement('button');
+            dot.className = 'slider-dot';
+            dot.type = 'button';
+            dot.setAttribute('role', 'tab');
+            dot.setAttribute('aria-label', `Go to testimonial set ${i + 1} of ${pageCount}`);
+            dot.addEventListener('click', () => goTo(i, true));
+            dotsWrap.appendChild(dot);
+            dots.push(dot);
+        }
+    }
+    buildDots();
 
     function render() {
         track.style.transform = `translateX(-${current * 100}%)`;
@@ -594,12 +624,13 @@ function initTestimonialSlider() {
             dot.setAttribute('aria-selected', String(i === current));
         });
         slides.forEach((slide, i) => {
-            slide.setAttribute('aria-hidden', String(i !== current));
+            const page = Math.floor(i / slidesPerView);
+            slide.setAttribute('aria-hidden', String(page !== current));
         });
     }
 
     function goTo(index, userInitiated) {
-        current = (index + slides.length) % slides.length;
+        current = (index + pageCount) % pageCount;
         render();
         if (userInitiated) restartAutoplay();
     }
@@ -608,7 +639,7 @@ function initTestimonialSlider() {
     function prev() { goTo(current - 1); }
 
     function startAutoplay() {
-        if (prefersReducedMotion || slides.length < 2) return;
+        if (prefersReducedMotion || pageCount < 2) return;
         stopAutoplay();
         autoplayTimer = setInterval(next, AUTOPLAY_MS);
     }
@@ -677,6 +708,22 @@ function initTestimonialSlider() {
     track.addEventListener('mousedown', (e) => { e.preventDefault(); onDragStart(e.clientX); });
     window.addEventListener('mousemove', (e) => onDragMove(e.clientX));
     window.addEventListener('mouseup', onDragEnd);
+
+    // Re-derive how many cards fit per screen on viewport changes
+    let resizeTimer = null;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+            const newSlidesPerView = getSlidesPerView();
+            if (newSlidesPerView === slidesPerView) return;
+            slidesPerView = newSlidesPerView;
+            pageCount = Math.ceil(slides.length / slidesPerView);
+            current = Math.min(current, pageCount - 1);
+            buildDots();
+            render();
+            restartAutoplay();
+        }, 150);
+    });
 
     render();
     startAutoplay();
@@ -950,16 +997,20 @@ initHeroCounters();
 // Our Story
 animateStoryChart();
 
-// Problem & Solution — must run before animateScrollReveals() below: it
-// pins a section and adds a large chunk of scroll height, which shifts
-// the position of every element that comes after it in the DOM. Registering
-// .reveal triggers first would measure them against the shorter pre-pin
-// layout and misfire them all at once near the pin's old position.
+// Problem & Solution, and How It Works, both pin a section and add a large
+// chunk of scroll height — each shifts the position of every element that
+// comes after it in the DOM. Both must run, and be refreshed, before
+// animateScrollReveals() below: registering .reveal triggers first would
+// measure them against the shorter pre-pin layout and misfire them all at
+// once near the pin's old position.
 initProblemSolutionStory();
-ScrollTrigger.refresh();  // refresh after P&S because it pins and changes layout height
+ScrollTrigger.refresh();
+
+initHorizontalSteps();
+ScrollTrigger.refresh();
 
 // Cross-section reveals (Our Story, Team, Testimonials, Contact, etc.) —
-// registered after the pin above so every element's position is measured
+// registered after both pins above so every element's position is measured
 // against the final, correct layout.
 animateScrollReveals();
 
@@ -967,9 +1018,6 @@ animateScrollReveals();
 animateFeatureCards();
 animateWeightageBars();
 initFeatureCardHover();
-
-// How It Works
-animateSteps();
 
 // Collaborative
 animateCollabParallax();

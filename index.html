@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Goalytics — Collaborative OKR Platform Powered by AI</title>
+    <title>Goalytics — The AI Engine Behind Every Goal</title>
+    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
     <meta name="description"
-        content="Goalytics is the AI-powered OKR platform that unites your team through real-time collaborative goal-setting sessions.">
+        content="Goalytics is the AI engine that generates, structures, balances, and tracks your team's OKRs — turning strategy into aligned execution, together.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
@@ -29,6 +30,7 @@
             <ul class="nav-links" id="nav-links">
                 <li><a href="#about">Problem &amp; Solution</a></li>
                 <li><a href="#features">Features</a></li>
+                <li><a href="#ai">The Engine</a></li>
                 <li><a href="#collaborative">Sessions</a></li>
                 <li><a href="#team">Team</a></li>
                 <li><a href="#testimonials">Testimonials</a></li>
@@ -51,6 +53,15 @@
             <div class="blob blob-1"></div>
             <div class="blob blob-2"></div>
             <div class="blob blob-3"></div>
+            <svg class="hero-circuit" viewBox="0 0 1440 800" preserveAspectRatio="xMidYMid slice">
+                <path class="circuit-path circuit-path-1"
+                    d="M-50 610 C 260 560, 380 430, 610 390 S 990 300, 1500 210" fill="none" />
+                <path class="circuit-path circuit-path-2"
+                    d="M-50 190 C 300 250, 500 190, 780 260 S 1220 430, 1500 470" fill="none" />
+                <circle class="circuit-node" cx="610" cy="390" r="4.5" style="--node-delay:0s" />
+                <circle class="circuit-node" cx="780" cy="260" r="4.5" style="--node-delay:0.6s" />
+                <circle class="circuit-node" cx="990" cy="300" r="4.5" style="--node-delay:1.2s" />
+            </svg>
         </div>
 
         <div class="container hero-inner">
@@ -58,17 +69,17 @@
             <div class="hero-text">
                 <div class="hero-badge" id="hero-badge">
                     <span class="badge-dot"></span>
-                    AI-Powered OKR Platform
+                    AI Engine · Live
                 </div>
                 <h1 id="hero-headline">
-                    Turn Strategy<br>
-                    Into Action —<br>
-                    <span class="hero-accent">Together.</span>
+                    The Engine Behind<br>
+                    Every Goal You<br>
+                    <span class="hero-accent">Hit.</span>
                 </h1>
                 <p class="hero-sub" id="hero-sub">
-                    Goalytics brings your entire team into the goal-setting process through
-                    live collaborative sessions, AI-generated suggestions, and a structured
-                    OKR framework that keeps everyone aligned and accountable.
+                    Goalytics isn't a place to log OKRs — it's the AI engine underneath them:
+                    generating goals, structuring objectives, balancing priorities, and surfacing
+                    insights, so your team spends time on strategy, not spreadsheets.
                 </p>
                 <div class="hero-actions" id="hero-actions">
                     <a href="#contact" class="btn btn-primary btn-lg">Get Started</a>
@@ -78,7 +89,7 @@
                             <circle cx="12" cy="12" r="10" />
                             <polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none" />
                         </svg>
-                        See How It Works
+                        See It Run
                     </a>
                 </div>
                 <div class="hero-stats" id="hero-stats">
@@ -113,7 +124,7 @@
                             rel="noopener noreferrer">portal.goalytics.io</a>
                     </div>
                     <div class="browser-frame-body">
-                        <img src="/assets/images/tree-2.png"
+                        <img src="/assets/images/tree-2.webp"
                             alt="Goalytics organizational tree showing goals, objectives, and key results linked across an organization">
                     </div>
                 </div>
@@ -405,8 +416,8 @@
         <div class="container">
             <div class="section-label reveal">What You Get</div>
             <h2 class="section-title reveal ai-title">Everything your team needs<br>to set and achieve goals</h2>
-            <p class="section-sub reveal ai-sub">Built on a structured OKR framework with real-time collaboration and AI
-                assistance at every step.</p>
+            <p class="section-sub reveal ai-sub">Built on a structured OKR framework — real-time collaboration, with
+                an AI engine running quietly in the background at every step.</p>
 
             <div class="features-grid">
                 <!-- Feature 1 -->
@@ -535,14 +546,37 @@
     <section id="how-it-works">
         <div class="container">
             <div class="section-label reveal">The Process</div>
-            <h2 class="section-title reveal">From setup to insight<br>in six clear steps</h2>
+            <h2 class="section-title reveal">From setup to insight<br>in six clear stages</h2>
+            <p class="section-sub reveal steps-sub">One continuous line, six stages — scroll to move the pipeline
+                forward.</p>
+        </div>
 
-            <div class="steps-container">
-                <div class="steps-line" aria-hidden="true"></div>
+        <div class="steps-pin">
+            <div class="steps-progress" aria-hidden="true">
+                <span class="steps-progress-count"><span id="steps-progress-current">01</span><i>/</i>06</span>
+                <div class="steps-progress-track">
+                    <div class="steps-progress-fill" id="steps-progress-fill"></div>
+                </div>
+            </div>
 
-                <div class="step">
-                    <div class="step-number" aria-hidden="true">01</div>
+            <div class="steps-track" id="steps-track">
+
+                <article class="step-panel">
+                    <div class="step-panel-media">
+                        <div class="browser-frame">
+                            <div class="browser-frame-bar">
+                                <span class="bf-dot" style="background:#f04438;"></span>
+                                <span class="bf-dot" style="background:#f79009;"></span>
+                                <span class="bf-dot" style="background:#12b76a;"></span>
+                                <span class="bf-url">portal.goalytics.io/onboarding</span>
+                            </div>
+                            <div class="browser-frame-body">
+                                <img src="assets/images/onboarding.webp" alt="Set up your organization" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
                     <div class="step-content">
+                        <div class="step-tag">Stage 01</div>
                         <div class="step-icon">
                             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2" stroke-linecap="round" aria-hidden="true">
@@ -555,11 +589,25 @@
                         <p>Admin completes onboarding: creates the organization, defines Team Types (Projects,
                             Departments, Employees), and adds the people who will participate in sessions.</p>
                     </div>
-                </div>
+                </article>
 
-                <div class="step">
-                    <div class="step-number" aria-hidden="true">02</div>
+                <article class="step-panel">
+                    <div class="step-panel-media">
+                        <div class="browser-frame">
+                            <div class="browser-frame-bar">
+                                <span class="bf-dot" style="background:#f04438;"></span>
+                                <span class="bf-dot" style="background:#f79009;"></span>
+                                <span class="bf-dot" style="background:#12b76a;"></span>
+                                <span class="bf-url">portal.goalytics.io/sessions/new</span>
+                            </div>
+                            <div class="browser-frame-body">
+                                <img src="assets/images/invite.webp" alt="Launch a session and invite your team"
+                                    loading="lazy">
+                            </div>
+                        </div>
+                    </div>
                     <div class="step-content">
+                        <div class="step-tag">Stage 02</div>
                         <div class="step-icon">
                             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2" stroke-linecap="round" aria-hidden="true">
@@ -574,11 +622,25 @@
                             by email — assigning each as Participant or Viewer. Schedule the session with timezone
                             support.</p>
                     </div>
-                </div>
+                </article>
 
-                <div class="step">
-                    <div class="step-number" aria-hidden="true">03</div>
+                <article class="step-panel">
+                    <div class="step-panel-media">
+                        <div class="browser-frame">
+                            <div class="browser-frame-bar">
+                                <span class="bf-dot" style="background:#f04438;"></span>
+                                <span class="bf-dot" style="background:#f79009;"></span>
+                                <span class="bf-dot" style="background:#12b76a;"></span>
+                                <span class="bf-url">portal.goalytics.io/session/goals</span>
+                            </div>
+                            <div class="browser-frame-body">
+                                <img src="assets/images/goals.webp" alt="Brainstorm goals together, live"
+                                    loading="lazy">
+                            </div>
+                        </div>
+                    </div>
                     <div class="step-content">
+                        <div class="step-tag">Stage 03</div>
                         <div class="step-icon">
                             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2" stroke-linecap="round" aria-hidden="true">
@@ -590,11 +652,25 @@
                             comments — all seen in real-time. AI suggests additional goals based on org context. Admin
                             finalizes the goal list.</p>
                     </div>
-                </div>
+                </article>
 
-                <div class="step">
-                    <div class="step-number" aria-hidden="true">04</div>
+                <article class="step-panel">
+                    <div class="step-panel-media">
+                        <div class="browser-frame">
+                            <div class="browser-frame-bar">
+                                <span class="bf-dot" style="background:#f04438;"></span>
+                                <span class="bf-dot" style="background:#f79009;"></span>
+                                <span class="bf-dot" style="background:#12b76a;"></span>
+                                <span class="bf-url">portal.goalytics.io/session/okrs</span>
+                            </div>
+                            <div class="browser-frame-body">
+                                <img src="assets/images/objectives.webp" alt="Define objectives and key results"
+                                    loading="lazy">
+                            </div>
+                        </div>
+                    </div>
                     <div class="step-content">
+                        <div class="step-tag">Stage 04</div>
                         <div class="step-icon">
                             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2" stroke-linecap="round" aria-hidden="true">
@@ -607,11 +683,25 @@
                             key results — the quantitative "how much." Participants can suggest; admins confirm and
                             finalize.</p>
                     </div>
-                </div>
+                </article>
 
-                <div class="step">
-                    <div class="step-number" aria-hidden="true">05</div>
+                <article class="step-panel">
+                    <div class="step-panel-media">
+                        <div class="browser-frame">
+                            <div class="browser-frame-bar">
+                                <span class="bf-dot" style="background:#f04438;"></span>
+                                <span class="bf-dot" style="background:#f79009;"></span>
+                                <span class="bf-dot" style="background:#12b76a;"></span>
+                                <span class="bf-url">portal.goalytics.io/session/weightage</span>
+                            </div>
+                            <div class="browser-frame-body">
+                                <img src="assets/images/weightage.webp" alt="Set objective priorities and weightage"
+                                    loading="lazy">
+                            </div>
+                        </div>
+                    </div>
                     <div class="step-content">
+                        <div class="step-tag">Stage 05</div>
                         <div class="step-icon">
                             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2" stroke-linecap="round" aria-hidden="true">
@@ -625,11 +715,25 @@
                             weightages; AI recommends optimal distributions. Admin applies the final values ensuring
                             they sum to 100%.</p>
                     </div>
-                </div>
+                </article>
 
-                <div class="step">
-                    <div class="step-number" aria-hidden="true">06</div>
+                <article class="step-panel">
+                    <div class="step-panel-media">
+                        <div class="browser-frame">
+                            <div class="browser-frame-bar">
+                                <span class="bf-dot" style="background:#f04438;"></span>
+                                <span class="bf-dot" style="background:#f79009;"></span>
+                                <span class="bf-dot" style="background:#12b76a;"></span>
+                                <span class="bf-url">portal.goalytics.io/dashboard</span>
+                            </div>
+                            <div class="browser-frame-body">
+                                <img src="assets/images/compare.webp" alt="Track, submit data and compare"
+                                    loading="lazy">
+                            </div>
+                        </div>
+                    </div>
                     <div class="step-content">
+                        <div class="step-tag">Stage 06</div>
                         <div class="step-icon">
                             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2" stroke-linecap="round" aria-hidden="true">
@@ -644,7 +748,8 @@
                             Snapshots freeze progress at key moments. The Comparison Report shows trends across goals
                             and time periods.</p>
                     </div>
-                </div>
+                </article>
+
             </div>
         </div>
     </section>
@@ -675,7 +780,7 @@
                                 rel="noopener noreferrer">portal.goalytics.io/session</a>
                         </div>
                         <div class="browser-frame-body">
-                            <img src="/assets/images/session.jpg"
+                            <img src="/assets/images/session.webp"
                                 alt="Live Goalytics session with team members setting and voting on goals together in real time">
                         </div>
                     </div>
@@ -744,14 +849,29 @@
     <section id="ai">
         <div class="ai-bg" aria-hidden="true"></div>
         <div class="container">
-            <div class="section-label reveal ai-label">AI Integration</div>
-            <h2 class="section-title reveal ai-title">AI isn't a feature.<br>It's your strategy partner.</h2>
-            <p class="section-sub reveal ai-sub">AI is woven through every layer of Goalytics — from the first
-                brainstorm to long-term performance analysis.</p>
+            <div class="section-label reveal ai-label">The Engine</div>
+            <h2 class="section-title reveal ai-title">One engine.<br>Nine moving parts.</h2>
+            <p class="section-sub reveal ai-sub">AI isn't bolted on as a feature — it's the drivetrain running
+                underneath every step, from your first brainstorm to your last board deck.</p>
+
+            <div class="engine-flow reveal" aria-hidden="true">
+                <div class="engine-flow-track"></div>
+                <div class="engine-flow-pulse"></div>
+                <div class="engine-flow-stage"><span class="efs-dot"></span><span class="efs-label">Context</span>
+                </div>
+                <div class="engine-flow-stage"><span class="efs-dot"></span><span class="efs-label">Generate</span>
+                </div>
+                <div class="engine-flow-stage"><span class="efs-dot"></span><span class="efs-label">Balance</span>
+                </div>
+                <div class="engine-flow-stage"><span class="efs-dot"></span><span class="efs-label">Monitor</span>
+                </div>
+                <div class="engine-flow-stage"><span class="efs-dot"></span><span class="efs-label">Automate</span>
+                </div>
+            </div>
 
             <div class="ai-grid">
                 <div class="ai-card">
-                    <div class="ai-card-num">01</div>
+                    <div class="ai-card-num">MOD.01</div>
                     <h3>Document-Grounded Context</h3>
                     <p>Upload strategy decks, briefs, or other org documents when creating an Organization or Team
                         Type. AI ingests this context so every suggestion downstream is grounded in your real
@@ -759,56 +879,56 @@
                     <div class="ai-card-tag">Used in: Organization & Team Type Setup</div>
                 </div>
                 <div class="ai-card">
-                    <div class="ai-card-num">02</div>
+                    <div class="ai-card-num">MOD.02</div>
                     <h3>Goal Generation</h3>
                     <p>AI analyzes your organization, team type, and historical context to generate a shortlist of
                         relevant, realistic strategic goals before your session even starts.</p>
                     <div class="ai-card-tag">Used in: Goal Setup</div>
                 </div>
                 <div class="ai-card">
-                    <div class="ai-card-num">03</div>
+                    <div class="ai-card-num">MOD.03</div>
                     <h3>Objective Structuring</h3>
                     <p>For each finalized goal, AI proposes a set of well-defined, measurable objectives — saving hours
                         of structured thinking and prompting discussion among your team.</p>
                     <div class="ai-card-tag">Used in: Collaborative Session</div>
                 </div>
                 <div class="ai-card">
-                    <div class="ai-card-num">04</div>
+                    <div class="ai-card-num">MOD.04</div>
                     <h3>Key Result Proposals</h3>
                     <p>AI drafts quantifiable key results — including metric, target value, unit, and baseline — so
                         every objective has a clear success measure from day one.</p>
                     <div class="ai-card-tag">Used in: Key Result Setup</div>
                 </div>
                 <div class="ai-card">
-                    <div class="ai-card-num">05</div>
+                    <div class="ai-card-num">MOD.05</div>
                     <h3>Weightage Balancing</h3>
                     <p>AI recommends optimal percentage distributions across your objectives, ensuring priorities are
                         proportional to impact. Team can accept, modify, or apply its own values.</p>
                     <div class="ai-card-tag">Used in: Weightage Step</div>
                 </div>
                 <div class="ai-card">
-                    <div class="ai-card-num">06</div>
+                    <div class="ai-card-num">MOD.06</div>
                     <h3>Dashboard Insights</h3>
                     <p>On any goal dashboard, trigger AI analysis to get plain-language performance commentary — what's
                         on track, what needs attention, and actionable recommendations.</p>
                     <div class="ai-card-tag">Used in: Goal Dashboard</div>
                 </div>
                 <div class="ai-card">
-                    <div class="ai-card-num">07</div>
+                    <div class="ai-card-num">MOD.07</div>
                     <h3>Agentic Mode</h3>
                     <p>Enable fully autonomous AI sessions where AI proposes the complete OKR structure — goals,
                         objectives, key results, and weightages — for your team to review, refine, and finalize.</p>
                     <div class="ai-card-tag">Used in: Agentic Sessions</div>
                 </div>
                 <div class="ai-card">
-                    <div class="ai-card-num">08</div>
+                    <div class="ai-card-num">MOD.08</div>
                     <h3>Snapshot Insights</h3>
                     <p>When a goal snapshot is taken, AI provides an interpretive analysis comparing it to previous
                         snapshots — surfacing trends and identifying risks before they become blockers.</p>
                     <div class="ai-card-tag">Used in: Snapshots</div>
                 </div>
                 <div class="ai-card">
-                    <div class="ai-card-num">09</div>
+                    <div class="ai-card-num">MOD.09</div>
                     <h3>Comparison Reports</h3>
                     <p>Compare multiple goals side-by-side, or stack a goal's snapshots against each other over time —
                         AI surfaces the trends and deltas so you can see exactly what's improving and what's stalling.
@@ -834,7 +954,7 @@
                     <div class="team-photo-wrap">
                         <!-- PLACEHOLDER: Replace with actual founder photo -->
                         <div class="team-photo-placeholder" aria-label="Nida Mehtab Gillio photo placeholder">
-                            <img src="/assets/images/founder.jpg" alt="">
+                            <img src="/assets/images/founder.webp" alt="">
                         </div>
                     </div>
                     <div class="team-content">
@@ -859,7 +979,7 @@
                     <div class="team-photo-wrap">
                         <!-- PLACEHOLDER: Replace with actual CTO photo -->
                         <div class="team-photo-placeholder" aria-label="Umair Khan photo placeholder">
-                            <img src="/assets/images/cto.jpg" alt="">
+                            <img src="/assets/images/cto.webp" alt="">
                         </div>
                     </div>
                     <div class="team-content">
@@ -910,7 +1030,6 @@
                             <div class="testimonial-author">
                                 <div class="testimonial-avatar" style="background:#2b77cc">SC</div>
                                 <div class="testimonial-author-info">
-                                    <strong class="testimonial-name">Sarah Chen</strong>
                                     <span class="testimonial-role">VP of Engineering, Lumina Health</span>
                                 </div>
                             </div>
@@ -923,7 +1042,6 @@
                             <div class="testimonial-author">
                                 <div class="testimonial-avatar" style="background:#12b76a">JO</div>
                                 <div class="testimonial-author-info">
-                                    <strong class="testimonial-name">James Okafor</strong>
                                     <span class="testimonial-role">COO, Brightpath Logistics</span>
                                 </div>
                             </div>
@@ -936,7 +1054,6 @@
                             <div class="testimonial-author">
                                 <div class="testimonial-avatar" style="background:#7a5af8">EP</div>
                                 <div class="testimonial-author-info">
-                                    <strong class="testimonial-name">Elena Petrova</strong>
                                     <span class="testimonial-role">Head of Product, Nordic Robotics</span>
                                 </div>
                             </div>
@@ -949,7 +1066,6 @@
                             <div class="testimonial-author">
                                 <div class="testimonial-avatar" style="background:#dc6803">MW</div>
                                 <div class="testimonial-author-info">
-                                    <strong class="testimonial-name">Marcus Webb</strong>
                                     <span class="testimonial-role">CEO, Fenwick &amp; Rowe</span>
                                 </div>
                             </div>
@@ -962,7 +1078,6 @@
                             <div class="testimonial-author">
                                 <div class="testimonial-avatar" style="background:#c11574">PR</div>
                                 <div class="testimonial-author-info">
-                                    <strong class="testimonial-name">Priya Raman</strong>
                                     <span class="testimonial-role">Director of Strategy, Solstice Retail Group</span>
                                 </div>
                             </div>
@@ -974,7 +1089,6 @@
                             <div class="testimonial-author">
                                 <div class="testimonial-avatar" style="background:#d92d20">TA</div>
                                 <div class="testimonial-author-info">
-                                    <strong class="testimonial-name">Tom Alvarez</strong>
                                     <span class="testimonial-role">Head of People Ops, CedarPoint Financial</span>
                                 </div>
                             </div>
@@ -1107,20 +1221,10 @@
             <div class="footer-top">
                 <div class="footer-brand">
                     <a href="#" class="logo logo-footer">
-                        <svg width="30" height="30" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"
-                            aria-hidden="true">
-                            <circle cx="18" cy="18" r="17" fill="var(--primary-600)" />
-                            <path d="M10 18 L16 24 L26 12" stroke="#ffffff" stroke-width="3" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            <circle cx="18" cy="18" r="6" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"
-                                fill="none" />
-                            <circle cx="18" cy="18" r="11" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"
-                                fill="none" />
-                        </svg>
-                        <span>Goalytics</span>
+                        <img src="/assets/images/logo-white.svg" alt="">
                     </a>
-                    <p>The AI-powered OKR platform that brings your whole team into the goal-setting process — live,
-                        collaborative, and aligned.</p>
+                    <p>The AI engine that powers your team's goals — from first brainstorm to final result, live and
+                        aligned.</p>
                     <!-- TODO: Replace # with the real Goalytics LinkedIn URL when available -->
                     <div class="footer-socials">
                         <a href="#" class="social-link" aria-label="Goalytics on LinkedIn">
