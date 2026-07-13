@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Goalytics — The AI Engine Behind Every Goal</title>
+    <title>Goalytics: The AI Engine Behind Every Goal</title>
     <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
     <meta name="description"
-        content="Goalytics is the AI engine that generates, structures, balances, and tracks your team's OKRs — turning strategy into aligned execution, together.">
+        content="Goalytics is the AI engine that generates, structures, balances, and tracks your team's OKRs, turning strategy into aligned execution, together.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -54,10 +54,10 @@
             <div class="blob blob-2"></div>
             <div class="blob blob-3"></div>
             <svg class="hero-circuit" viewBox="0 0 1440 800" preserveAspectRatio="xMidYMid slice">
-                <path class="circuit-path circuit-path-1"
-                    d="M-50 610 C 260 560, 380 430, 610 390 S 990 300, 1500 210" fill="none" />
-                <path class="circuit-path circuit-path-2"
-                    d="M-50 190 C 300 250, 500 190, 780 260 S 1220 430, 1500 470" fill="none" />
+                <path class="circuit-path circuit-path-1" d="M-50 610 C 260 560, 380 430, 610 390 S 990 300, 1500 210"
+                    fill="none" />
+                <path class="circuit-path circuit-path-2" d="M-50 190 C 300 250, 500 190, 780 260 S 1220 430, 1500 470"
+                    fill="none" />
                 <circle class="circuit-node" cx="610" cy="390" r="4.5" style="--node-delay:0s" />
                 <circle class="circuit-node" cx="780" cy="260" r="4.5" style="--node-delay:0.6s" />
                 <circle class="circuit-node" cx="990" cy="300" r="4.5" style="--node-delay:1.2s" />
@@ -77,7 +77,7 @@
                     <span class="hero-accent">Hit.</span>
                 </h1>
                 <p class="hero-sub" id="hero-sub">
-                    Goalytics isn't a place to log OKRs — it's the AI engine underneath them:
+                    Goalytics isn't a place to log OKRs; it's the AI engine underneath them:
                     generating goals, structuring objectives, balancing priorities, and surfacing
                     insights, so your team spends time on strategy, not spreadsheets.
                 </p>
@@ -94,18 +94,31 @@
                 </div>
                 <div class="hero-stats" id="hero-stats">
                     <div class="stat">
-                        <strong class="stat-num" data-target="72">0</strong><span>%</span>
-                        <span class="stat-label">Top Decile Performance</span>
+                        <strong class="stat-num" data-target="40"><span class="stat-arrow stat-arrow--down">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <polyline points="6 9 12 15 18 9" />
+                                </svg>
+                            </span>0</strong><span class="stat-pct">%</span>
+                        <span class="stat-label">Decision-Making Time</span>
                     </div>
                     <div class="stat-divider"></div>
                     <div class="stat">
-                        <strong class="stat-num" data-target="22">0</strong><span>%</span>
-                        <span class="stat-label">Faster to Hit Targets</span>
+                        <strong class="stat-num" data-target="30"><span class="stat-arrow stat-arrow--down"><svg
+                                    width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <polyline points="6 9 12 15 18 9" />
+                                </svg></span>0</strong><span class="stat-pct">%</span>
+                        <span class="stat-label">Manual Processing</span>
                     </div>
                     <div class="stat-divider"></div>
                     <div class="stat">
-                        <strong class="stat-num" data-target="31">0</strong><span>%</span>
-                        <span class="stat-label">Better Results</span>
+                        <strong class="stat-num" data-target="50"><span class="stat-arrow stat-arrow--up"><svg
+                                    width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <polyline points="18 15 12 9 6 15" />
+                                </svg></span>0</strong><span class="stat-pct">%</span>
+                        <span class="stat-label">Employee Motivation</span>
                     </div>
                 </div>
             </div>
@@ -271,7 +284,7 @@
                             </h2>
                             <p class="ps-body">83% of companies using OKRs report clear, tangible benefits. Yet
                                 leadership teams keep hitting the same wall, quarter after quarter. Scroll to see
-                                where it breaks — and how we fix it.</p>
+                                where it breaks, and how we fix it.</p>
                         </article>
 
                         <article class="ps-panel" data-phase="problem" data-stat="15">
@@ -313,8 +326,8 @@
                             <div class="ps-kicker">The Turning Point</div>
                             <h3>Enter Goalytics.</h3>
                             <blockquote class="ps-quote">"I spend half my time fixing what should be saving us
-                                time."<cite>— CPG Brand Manager</cite></blockquote>
-                            <p>One unified, AI-powered platform — built to close the gap between strategy and
+                                time."<cite>CPG Brand Manager</cite></blockquote>
+                            <p>One unified, AI-powered platform, built to close the gap between strategy and
                                 execution.</p>
                         </article>
 
@@ -337,7 +350,7 @@
                         <article class="ps-panel" data-phase="solution" data-stat="30">
                             <div class="ps-kicker">Fix 3 of 4</div>
                             <h3>AI-Powered Automation</h3>
-                            <p>AI automates goal-setting, progress tracking, and reporting — end to end.</p>
+                            <p>AI automates goal-setting, progress tracking, and reporting, from end to end.</p>
                             <div class="ps-callout ps-callout-positive"><strong>30% of time</strong> saved on manual
                                 tasks.</div>
                         </article>
@@ -416,7 +429,7 @@
         <div class="container">
             <div class="section-label reveal">What You Get</div>
             <h2 class="section-title reveal ai-title">Everything your team needs<br>to set and achieve goals</h2>
-            <p class="section-sub reveal ai-sub">Built on a structured OKR framework — real-time collaboration, with
+            <p class="section-sub reveal ai-sub">Built on a structured OKR framework, with real-time collaboration and
                 an AI engine running quietly in the background at every step.</p>
 
             <div class="features-grid">
@@ -433,7 +446,7 @@
                     </div>
                     <h3>Real-Time Collaborative Sessions</h3>
                     <p>Launch live OKR workshops where your team adds, edits, votes on, and comments on goals
-                        simultaneously — all visible in real-time via WebSocket.</p>
+                        simultaneously, all visible in real-time via WebSocket.</p>
                 </div>
 
                 <!-- Feature 2 -->
@@ -446,7 +459,7 @@
                     </div>
                     <h3>AI-Generated Goals & Objectives</h3>
                     <p>AI analyzes your organization's context and suggests relevant goals, structured objectives, and
-                        measurable key results — so you start every session with a head start.</p>
+                        measurable key results, so you start every session with a head start.</p>
                 </div>
 
                 <!-- Feature 3 -->
@@ -475,7 +488,7 @@
                     </div>
                     <h3>Smart Weightage Allocation</h3>
                     <p>Assign priority percentages to each objective. AI recommends optimal weightage distributions;
-                        participants can suggest their own — all summing to 100% with live validation.</p>
+                        participants can suggest their own, all summing to 100% with live validation.</p>
                 </div>
 
                 <!-- Feature 5 -->
@@ -521,7 +534,7 @@
                     </div>
                     <h3>Data Request System</h3>
                     <p>Admins can request key result progress data from team members on a schedule. Recipients submit
-                        values via a dedicated portal — even without logging in to the main app.</p>
+                        values via a dedicated portal, even without logging in to the main app.</p>
                 </div>
 
                 <!-- Feature 8 -->
@@ -533,7 +546,7 @@
                         </svg>
                     </div>
                     <h3>Role-Based Access Control</h3>
-                    <p>Four roles — Admin, Manager, Participant, and Viewer — with precisely scoped permissions. Admins
+                    <p>Four roles (Admin, Manager, Participant, and Viewer) with precisely scoped permissions. Admins
                         lead sessions, participants suggest and vote, viewers observe in real-time.</p>
                 </div>
             </div>
@@ -547,7 +560,7 @@
         <div class="container">
             <div class="section-label reveal">The Process</div>
             <h2 class="section-title reveal">From setup to insight<br>in six clear stages</h2>
-            <p class="section-sub reveal steps-sub">One continuous line, six stages — scroll to move the pipeline
+            <p class="section-sub reveal steps-sub">One continuous line, six stages. Scroll to move the pipeline
                 forward.</p>
         </div>
 
@@ -619,7 +632,7 @@
                         </div>
                         <h3>Launch a Session & Invite Your Team</h3>
                         <p>Create a Collaborative Session for a project, department, or employee. Invite collaborators
-                            by email — assigning each as Participant or Viewer. Schedule the session with timezone
+                            by email, assigning each as Participant or Viewer. Schedule the session with timezone
                             support.</p>
                     </div>
                 </article>
@@ -649,7 +662,7 @@
                         </div>
                         <h3>Brainstorm Goals Together, Live</h3>
                         <p>Everyone joins the live session. Team members add goals, like their favorites, and leave
-                            comments — all seen in real-time. AI suggests additional goals based on org context. Admin
+                            comments, all seen in real-time. AI suggests additional goals based on org context. Admin
                             finalizes the goal list.</p>
                     </div>
                 </article>
@@ -679,8 +692,8 @@
                             </svg>
                         </div>
                         <h3>Define Objectives & Key Results</h3>
-                        <p>For each finalized goal, the team collaborates on objectives — the qualitative "what" — and
-                            key results — the quantitative "how much." Participants can suggest; admins confirm and
+                        <p>For each finalized goal, the team collaborates on objectives (the qualitative "what") and
+                            key results (the quantitative "how much"). Participants can suggest; admins confirm and
                             finalize.</p>
                     </div>
                 </article>
@@ -762,9 +775,9 @@
             <div class="collab-inner">
                 <div class="collab-text reveal">
                     <div class="section-label">Real-Time Collaboration</div>
-                    <h2>Your entire team,<br>in one room — live.</h2>
-                    <p>Goalytics sessions are powered by WebSocket technology, meaning every action — a new goal added,
-                        a like given, a comment posted — is instantly visible to every participant in the room. No
+                    <h2>Your entire team,<br>in one room, live.</h2>
+                    <p>Goalytics sessions are powered by WebSocket technology, meaning every action (a new goal added,
+                        a like given, a comment posted) is instantly visible to every participant in the room. No
                         refreshing, no waiting, no back-and-forth emails.</p>
                 </div>
 
@@ -827,7 +840,8 @@
                         <h6>Three Session Modes</h6>
                         <p><strong>Solo:</strong> work through your OKRs on your own, with AI assistance at every
                             step. <strong>Collaborative:</strong> your whole team builds goals together, live and in
-                            real time. <strong>Fully Automated:</strong> AI drives the full OKR structure — you simply
+                            real time. <strong>Fully Automated:</strong> AI drives the full OKR structure, and you
+                            simply
                             review and refine.</p>
                     </div>
                 </div>
@@ -851,7 +865,7 @@
         <div class="container">
             <div class="section-label reveal ai-label">The Engine</div>
             <h2 class="section-title reveal ai-title">One engine.<br>Nine moving parts.</h2>
-            <p class="section-sub reveal ai-sub">AI isn't bolted on as a feature — it's the drivetrain running
+            <p class="section-sub reveal ai-sub">AI isn't bolted on as a feature; it's the drivetrain running
                 underneath every step, from your first brainstorm to your last board deck.</p>
 
             <div class="engine-flow reveal" aria-hidden="true">
@@ -875,7 +889,7 @@
                     <h3>Document-Grounded Context</h3>
                     <p>Upload strategy decks, briefs, or other org documents when creating an Organization or Team
                         Type. AI ingests this context so every suggestion downstream is grounded in your real
-                        strategy — not generic templates.</p>
+                        strategy, not generic templates.</p>
                     <div class="ai-card-tag">Used in: Organization & Team Type Setup</div>
                 </div>
                 <div class="ai-card">
@@ -888,14 +902,14 @@
                 <div class="ai-card">
                     <div class="ai-card-num">MOD.03</div>
                     <h3>Objective Structuring</h3>
-                    <p>For each finalized goal, AI proposes a set of well-defined, measurable objectives — saving hours
+                    <p>For each finalized goal, AI proposes a set of well-defined, measurable objectives, saving hours
                         of structured thinking and prompting discussion among your team.</p>
                     <div class="ai-card-tag">Used in: Collaborative Session</div>
                 </div>
                 <div class="ai-card">
                     <div class="ai-card-num">MOD.04</div>
                     <h3>Key Result Proposals</h3>
-                    <p>AI drafts quantifiable key results — including metric, target value, unit, and baseline — so
+                    <p>AI drafts quantifiable key results (including metric, target value, unit, and baseline) so
                         every objective has a clear success measure from day one.</p>
                     <div class="ai-card-tag">Used in: Key Result Setup</div>
                 </div>
@@ -909,29 +923,30 @@
                 <div class="ai-card">
                     <div class="ai-card-num">MOD.06</div>
                     <h3>Dashboard Insights</h3>
-                    <p>On any goal dashboard, trigger AI analysis to get plain-language performance commentary — what's
+                    <p>On any goal dashboard, trigger AI analysis to get plain-language performance commentary: what's
                         on track, what needs attention, and actionable recommendations.</p>
                     <div class="ai-card-tag">Used in: Goal Dashboard</div>
                 </div>
                 <div class="ai-card">
                     <div class="ai-card-num">MOD.07</div>
                     <h3>Agentic Mode</h3>
-                    <p>Enable fully autonomous AI sessions where AI proposes the complete OKR structure — goals,
-                        objectives, key results, and weightages — for your team to review, refine, and finalize.</p>
+                    <p>Enable fully autonomous AI sessions where AI proposes the complete OKR structure (goals,
+                        objectives, key results, and weightages) for your team to review, refine, and finalize.</p>
                     <div class="ai-card-tag">Used in: Agentic Sessions</div>
                 </div>
                 <div class="ai-card">
                     <div class="ai-card-num">MOD.08</div>
                     <h3>Snapshot Insights</h3>
                     <p>When a goal snapshot is taken, AI provides an interpretive analysis comparing it to previous
-                        snapshots — surfacing trends and identifying risks before they become blockers.</p>
+                        snapshots, surfacing trends and identifying risks before they become blockers.</p>
                     <div class="ai-card-tag">Used in: Snapshots</div>
                 </div>
                 <div class="ai-card">
                     <div class="ai-card-num">MOD.09</div>
                     <h3>Comparison Reports</h3>
-                    <p>Compare multiple goals side-by-side, or stack a goal's snapshots against each other over time —
-                        AI surfaces the trends and deltas so you can see exactly what's improving and what's stalling.
+                    <p>Compare multiple goals side-by-side, or stack a goal's snapshots against each other over time,
+                        with AI surfacing the trends and deltas so you can see exactly what's improving and what's
+                        stalling.
                     </p>
                     <div class="ai-card-tag">Used in: Comparison Reports</div>
                 </div>
@@ -969,7 +984,7 @@
                             change management.
                         </p>
                         <blockquote class="team-quote">
-                            "The key to making OKRs deliver isn't just discipline or the right tech — it's clearly
+                            "The key to making OKRs deliver isn't just discipline or the right tech; it's clearly
                             understanding the goals they're meant to serve."
                         </blockquote>
                     </div>
@@ -990,7 +1005,7 @@
                             A dynamic architect backed by AWS certification and deep software engineering training,
                             Umair began his career as a Business Analyst before evolving into a driven CTO. He
                             combines management acumen with technical expertise across cloud platforms like AWS and
-                            Azure — spanning Lambda, App Service/Functions, EC2, RDS, and EKS/AKS Kubernetes — with
+                            Azure, spanning Lambda, App Service/Functions, EC2, RDS, and EKS/AKS Kubernetes, with
                             recent ventures in blockchain, including delivering a pioneering cryptocurrency exchange.
                             He brings award-winning full stack development to Goalytics as CTO, and also serves as
                             CTO of Digital Gravity.
@@ -1026,7 +1041,7 @@
                             <div class="testimonial-stars" aria-hidden="true">★★★★★</div>
                             <p class="testimonial-quote">"Our quarterly planning used to take three weeks of
                                 back-and-forth emails. With Goalytics, we finalized our entire OKR set in a single
-                                90-minute session — with more buy-in than we've ever had."</p>
+                                90-minute session, with more buy-in than we've ever had."</p>
                             <div class="testimonial-author">
                                 <div class="testimonial-avatar" style="background:#2b77cc">SC</div>
                                 <div class="testimonial-author-info">
@@ -1036,7 +1051,7 @@
                         </li>
                         <li class="testimonial-slide">
                             <div class="testimonial-stars" aria-hidden="true">★★★★★</div>
-                            <p class="testimonial-quote">"The AI suggestions aren't generic — they're grounded in our
+                            <p class="testimonial-quote">"The AI suggestions aren't generic; they're grounded in our
                                 actual strategy docs. It genuinely feels like having a strategy consultant sitting in
                                 every session."</p>
                             <div class="testimonial-author">
@@ -1124,7 +1139,7 @@
                     <div class="section-label">Get in Touch</div>
                     <h2>Ready to align<br>your team?</h2>
                     <p>Whether you want a demo, have questions about pricing, or want to discuss how Goalytics fits your
-                        organization — drop us a message and we'll get back to you within 24 hours.</p>
+                        organization, so drop us a message and we'll get back to you within 24 hours.</p>
                     <div class="contact-info">
                         <div class="contact-info-item">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary-500)"
@@ -1208,7 +1223,7 @@
                 </svg>
             </div>
             <h3 id="success-modal-title">Message sent!</h3>
-            <p id="success-modal-desc">Thanks for reaching out — we'll be in touch within 24 hours.</p>
+            <p id="success-modal-desc">Thanks for reaching out. We'll be in touch within 24 hours.</p>
             <button type="button" class="btn btn-primary success-modal-ok" id="success-modal-ok">Got it</button>
         </div>
     </div>
@@ -1223,11 +1238,12 @@
                     <a href="#" class="logo logo-footer">
                         <img src="/assets/images/logo-white.svg" alt="">
                     </a>
-                    <p>The AI engine that powers your team's goals — from first brainstorm to final result, live and
+                    <p>The AI engine that powers your team's goals, from first brainstorm to final result, live and
                         aligned.</p>
                     <!-- TODO: Replace # with the real Goalytics LinkedIn URL when available -->
                     <div class="footer-socials">
-                        <a href="#" class="social-link" aria-label="Goalytics on LinkedIn">
+                        <a href="https://www.linkedin.com/company/goalytics-ai/" class="social-link" target="_blank"
+                            aria-label="Goalytics on LinkedIn">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                                 <path
                                     d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
@@ -1272,7 +1288,7 @@
 
             <div class="footer-bottom">
                 <p>© <span id="footer-year"></span> Goalytics. All rights reserved.</p>
-                <p class="footer-credit">Built with purpose — strategy belongs to everyone.</p>
+                <p class="footer-credit">Built with purpose: strategy belongs to everyone.</p>
             </div>
         </div>
     </footer>

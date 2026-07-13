@@ -159,6 +159,24 @@ function animateCounter(el) {
     const duration = 1.8;
     const startTime = performance.now();
 
+    // Preserve the arrow span so textContent updates don't wipe it out
+    const arrowSpan = el.querySelector('.stat-arrow');
+    let textNode = el.lastChild;
+    // Ensure there's a text node after the arrow span to update in place
+    if (!textNode || textNode.nodeType !== Node.TEXT_NODE) {
+        textNode = document.createTextNode('0');
+        el.appendChild(textNode);
+    }
+
+    function setNumber(val) {
+        const formatted = val >= 1000 ? val.toLocaleString() : String(val);
+        if (arrowSpan) {
+            textNode.nodeValue = formatted;
+        } else {
+            el.textContent = formatted;
+        }
+    }
+
     function tick(now) {
         const elapsed = (now - startTime) / 1000;
         const progress = Math.min(elapsed / duration, 1);
@@ -166,13 +184,10 @@ function animateCounter(el) {
         const eased = 1 - Math.pow(1 - progress, 3);
         const current = Math.round(eased * target);
 
-        // Format with commas for large numbers
-        el.textContent = current >= 1000
-            ? current.toLocaleString()
-            : String(current);
+        setNumber(current);
 
         if (progress < 1) requestAnimationFrame(tick);
-        else el.textContent = target >= 1000 ? target.toLocaleString() : String(target);
+        else setNumber(target);
     }
 
     requestAnimationFrame(tick);
@@ -906,41 +921,33 @@ function initContactForm() {
         btnText.hidden = true;
         btnSpinner.hidden = false;
 
-        // ─────────────────────────────────────────────────────────────────
-        // TODO: Replace the simulated delay below with a real submit to the
-        // PHP endpoint that will send mail via SMTP to info@goalytics.io,
-        // cc: nida@goalytics.io, shahzer@goalytics.io.
-        //
-        //   const formData = new FormData(form);
-        //   const payload = {
-        //     name:    formData.get('name'),
-        //     email:   formData.get('email'),
-        //     company: formData.get('company'),
-        //     message: formData.get('message'),
-        //   };
-        //
-        //   const response = await fetch('/contact.php', {
-        //     method: 'POST',
-        //     headers: { 'Content-Type': 'application/json' },
-        //     body: JSON.stringify(payload),
-        //   });
-        //
-        //   if (!response.ok) throw new Error('Submission failed');
-        //   const data = await response.json();
-        //   console.log('Success:', data);
-        // ─────────────────────────────────────────────────────────────────
+        const formData = new FormData(form);
+        const payload = {
+            name:    formData.get('name'),
+            email:   formData.get('email'),
+            company: formData.get('company'),
+            message: formData.get('message'),
+        };
 
         try {
-            // Simulated network delay — REMOVE when wiring real endpoint
-            await new Promise(resolve => setTimeout(resolve, 1400));
+            const response = await fetch('/contact.php', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload),
+            });
 
-            // Keep the form in place; just clear it and show the success modal
+            const data = await response.json();
+
+            if (!response.ok || !data.success) {
+                throw new Error(data.message || 'Submission failed');
+            }
+
             form.reset();
             openSuccessModal();
 
         } catch (error) {
             console.error('Contact form submission error:', error);
-            showError('message', 'Something went wrong. Please try again or email us directly.');
+            showError('message', error.message || 'Something went wrong. Please try again or email us directly.');
         } finally {
             submitBtn.disabled = false;
             btnText.hidden = false;
